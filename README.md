@@ -1,1 +1,3 @@
-# WP_TEAM
+# CCHC
+
+Wordpress Custom Theme for Cool Comedy Hot Cuisine
