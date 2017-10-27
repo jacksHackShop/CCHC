@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -71,7 +71,6 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
 	margin: 0 auto;
 }
 
@@ -153,14 +152,14 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: $white;
 }
 
 	#logo {
 		margin: 0.75em 0;
 
 		a {
-			color: $white;
+			color: $black;
 		}
 	}
 
@@ -184,7 +183,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $black;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -249,11 +248,58 @@ and more scalable.
 
 /*********************
 POSTS & CONTENT STYLES
+
+							<div class="side_by_side_row">
+								<div class="side_by_side img left" style='background-image:url("<?php echo get_field("side_by_side_image_1"); ?>");'></div><!--
+								--><div class="side_by_side text right"><?php echo get_field("side_by_side_text_1"); ?></div>
+							</div>
 *********************/
 
 #content {
 	margin-top: 1.5em;
 }
+
+		.side_by_side_row{
+			width:100%;
+			position:relative;
+			display:block;
+			&.blue{
+				background-color:$blue;
+				color:$white;
+			}
+			&.gray{
+				background-color:$gray;
+				color:$black;
+			}
+		}
+		.side_by_side{
+			width:100%;
+			display:block;
+			&.image{
+				background-position:center;
+				background-size:cover;
+				height:500px;
+			}
+			&.text{
+				padding: 1px 25px;
+			}
+		}
+
+		.button_row {
+	    position: relative;
+	    padding: 25px 25px;
+
+	    .button{    
+	    	margin: 10px auto;
+		    border: 1px solid #393939;
+		    color: #393939;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    padding: 30px;
+		    display: block;
+		    text-align: center;
+	    }
+		}
 
 		.hentry {
 			background-color: $white;

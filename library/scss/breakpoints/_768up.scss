@@ -24,20 +24,32 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
 }
 
 /*********************
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	//position:fixed; REMOVED UNTIL RESPONSIVE HEADER FIGURED OUT
+	width:100%;
+}
 
-	#logo {}
+	#logo {
+		display:inline-block;
+		width:30%;
+		min-width:300px;
+		vertical-align:middle;
+	}
 
 /*********************
 NAVIGATION STYLES
 *********************/
+
+nav{
+	display:inline-block;
+  vertical-align: top;
+}
 
 .nav {
 	border: 0;
@@ -57,7 +69,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
+				color: $black;
 				text-decoration: underline;
 			}
 		}
@@ -136,6 +148,44 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+
+
+
+
+
+#content {
+	margin-top: 0;
+}
+
+
+		.side_by_side{
+			width:50%;
+			display:inline-block;
+
+			&.left{ float:left; }
+
+			&.right{ float:right; }
+
+			&.text{ 
+				padding: 0% 6%;
+				height:49vw;
+			}
+			&.image{
+				height:49vw;
+			}
+		}
+
+		.button_row {
+	    text-align: center;
+
+	    .button{
+	    	display:inline-block;
+	    	padding:5px 10px;
+	    	margin:0 10px;
+	    }
+		}
+
 
 /*********************
 SIDEBARS & ASIDES
