@@ -9,3 +9,14 @@ on larger screens.
 
 ******************************************************************/
 
+
+
+@media (min-width: 1540px) {
+	.wrap {
+	  width: 1540px;
+	}
+	.side_by_side{
+		width:770px;
+		height:770px;
+	}
+}
