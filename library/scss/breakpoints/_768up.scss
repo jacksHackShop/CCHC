@@ -335,3 +335,34 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+/* Start Mason Style Work */
+
+.footer {
+	background-color: $white;
+}
+
+	.newsletter_wrapper {
+		background-color: $blue;
+		height: 40px; /* fix */
+		
+		p {
+			text-decoration-color: $white;
+		}
+
+		.subscribe_button {
+			width: 40px;
+			height: 40px;
+			background-color: $alert-red;
+			text-decoration-color: $white;
+		}
+
+	}
+	.sponsers_wrapper {
+    	width: 60%;
+
+		img {
+		    max-width: 300px;
+		    width: 40%;
+		    margin: 2% 4.5%;
+		}
+	}

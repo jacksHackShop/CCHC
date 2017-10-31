@@ -2207,6 +2207,12 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/* Start Mason Style Work */
+/* line 940, ../scss/breakpoints/_base.scss */
+.footer {
+  background-color: #fff;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2533,6 +2539,40 @@ you can add resource intensive styles.
   }
 
   /* end .footer-links */
+  /* Start Mason Style Work */
+  /* line 340, ../scss/breakpoints/_768up.scss */
+  .footer {
+    background-color: #fff;
+  }
+
+  /* line 344, ../scss/breakpoints/_768up.scss */
+  .newsletter_wrapper {
+    background-color: #163852;
+    height: 40px;
+    /* fix */
+  }
+  /* line 348, ../scss/breakpoints/_768up.scss */
+  .newsletter_wrapper p {
+    text-decoration-color: #fff;
+  }
+  /* line 352, ../scss/breakpoints/_768up.scss */
+  .newsletter_wrapper .subscribe_button {
+    width: 40px;
+    height: 40px;
+    background-color: #fbe3e4;
+    text-decoration-color: #fff;
+  }
+
+  /* line 360, ../scss/breakpoints/_768up.scss */
+  .sponsers_wrapper {
+    width: 60%;
+  }
+  /* line 363, ../scss/breakpoints/_768up.scss */
+  .sponsers_wrapper img {
+    max-width: 300px;
+    width: 40%;
+    margin: 2% 4.5%;
+  }
 }
 /*********************
 DESKTOP
