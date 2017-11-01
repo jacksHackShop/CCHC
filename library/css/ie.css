@@ -483,30 +483,78 @@ mobile. Make sure to double check these!
 /* line 344, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper {
   background-color: #163852;
-  height: 40px;
-  /* fix */
 }
 /* line 348, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper p {
-  text-decoration-color: #fff;
+  color: #fff;
 }
 /* line 352, ../scss/breakpoints/_768up.scss */
+.newsletter_wrapper .subscribe_wrapper {
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 356, ../scss/breakpoints/_768up.scss */
+.newsletter_wrapper .subscribe_wrapper > * {
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 363, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper .subscribe_button {
-  width: 40px;
-  height: 40px;
-  background-color: #fbe3e4;
-  text-decoration-color: #fff;
+  padding: 5px 15px;
+  background-color: #c03329;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-/* line 360, ../scss/breakpoints/_768up.scss */
+/* line 376, ../scss/breakpoints/_768up.scss */
+.bottom_wrapper > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 381, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper {
   width: 60%;
 }
-/* line 363, ../scss/breakpoints/_768up.scss */
+/* line 384, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper img {
-  max-width: 300px;
+  max-width: 250px;
   width: 40%;
   margin: 2% 4.5%;
+}
+
+/* line 392, ../scss/breakpoints/_768up.scss */
+.social_wrapper {
+  height: 100%;
+  width: 15%;
+  min-width: 120px;
+  max-width: 200px;
+  float: right;
+  margin: 35px 10%;
+}
+
+/* line 401, ../scss/breakpoints/_768up.scss */
+.social_buttons_text {
+  color: #4D4D4F;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* line 408, ../scss/breakpoints/_768up.scss */
+.social_media_buttons {
+  font-size: 0;
+  height: 50%;
+}
+/* line 412, ../scss/breakpoints/_768up.scss */
+.social_media_buttons a {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
 }
 
 /******************************************************************
