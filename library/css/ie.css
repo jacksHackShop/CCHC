@@ -66,17 +66,21 @@ FONT FACE (IN YOUR FACE)
   http://www.fontsquirrel.com/
   Be sure to remove the comment brackets.
 */
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+}
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -90,7 +94,7 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 65, ../scss/partials/_typography.scss */
+/* line 69, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -276,10 +280,11 @@ HEADER STYLES
 *********************/
 /* line 33, ../scss/breakpoints/_768up.scss */
 .header {
-  width: 100%;
+  width: 98%;
+  padding: 0 1%;
 }
 
-/* line 38, ../scss/breakpoints/_768up.scss */
+/* line 39, ../scss/breakpoints/_768up.scss */
 #logo {
   display: inline-block;
   width: 30%;
@@ -290,25 +295,30 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 49, ../scss/breakpoints/_768up.scss */
+/* line 50, ../scss/breakpoints/_768up.scss */
 nav {
   display: inline-block;
   vertical-align: top;
 }
 
 /* line 54, ../scss/breakpoints/_768up.scss */
+.nav_bar {
+  float: right;
+}
+
+/* line 57, ../scss/breakpoints/_768up.scss */
 .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 56, ../scss/breakpoints/_768up.scss */
+/* line 60, ../scss/breakpoints/_768up.scss */
 .nav ul {
   background: #393939;
   margin-top: 0;
 }
-/* line 60, ../scss/breakpoints/_768up.scss */
+/* line 64, ../scss/breakpoints/_768up.scss */
 .nav li {
   float: left;
   position: relative;
@@ -317,7 +327,7 @@ nav {
   */
   /* showing sub-menus */
 }
-/* line 64, ../scss/breakpoints/_768up.scss */
+/* line 68, ../scss/breakpoints/_768up.scss */
 .nav li a {
   border-bottom: 0;
   /*
@@ -325,12 +335,12 @@ nav {
   has the possibility of being a mobile device.
   */
 }
-/* line 71, ../scss/breakpoints/_768up.scss */
+/* line 75, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #393939;
   text-decoration: underline;
 }
-/* line 83, ../scss/breakpoints/_768up.scss */
+/* line 87, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -341,7 +351,7 @@ nav {
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 92, ../scss/breakpoints/_768up.scss */
+/* line 96, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -350,7 +360,7 @@ nav {
   for usability. k, bai.
   */
 }
-/* line 94, ../scss/breakpoints/_768up.scss */
+/* line 98, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -359,58 +369,65 @@ nav {
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 111, ../scss/breakpoints/_768up.scss */
+/* line 115, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 121, ../scss/breakpoints/_768up.scss */
+/* line 125, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 136, ../scss/breakpoints/_768up.scss */
+/* line 140, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
 }
 
 /* end .nav */
-/* line 157, ../scss/breakpoints/_768up.scss */
+/* line 161, ../scss/breakpoints/_768up.scss */
 #content {
   margin-top: 0;
 }
 
-/* line 162, ../scss/breakpoints/_768up.scss */
+/* line 167, ../scss/breakpoints/_768up.scss */
+.hero_overlay {
+  width: 80%;
+  padding: 5% 0;
+}
+
+/* line 173, ../scss/breakpoints/_768up.scss */
 .side_by_side {
   width: 50%;
   display: inline-block;
 }
-/* line 166, ../scss/breakpoints/_768up.scss */
+/* line 177, ../scss/breakpoints/_768up.scss */
 .side_by_side.left {
   float: left;
 }
-/* line 168, ../scss/breakpoints/_768up.scss */
+/* line 179, ../scss/breakpoints/_768up.scss */
 .side_by_side.right {
   float: right;
 }
-/* line 170, ../scss/breakpoints/_768up.scss */
+/* line 181, ../scss/breakpoints/_768up.scss */
 .side_by_side.text {
   padding: 0% 6%;
   height: 49vw;
 }
-/* line 174, ../scss/breakpoints/_768up.scss */
+/* line 185, ../scss/breakpoints/_768up.scss */
 .side_by_side.image {
   height: 49vw;
 }
 
-/* line 179, ../scss/breakpoints/_768up.scss */
+/* line 190, ../scss/breakpoints/_768up.scss */
 .button_row {
   text-align: center;
 }
-/* line 182, ../scss/breakpoints/_768up.scss */
-.button_row .button {
+
+/* line 196, ../scss/breakpoints/_768up.scss */
+.button {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
@@ -419,28 +436,28 @@ nav {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 194, ../scss/breakpoints/_768up.scss */
+/* line 205, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 198, ../scss/breakpoints/_768up.scss */
+/* line 209, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 203, ../scss/breakpoints/_768up.scss */
+/* line 214, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 208, ../scss/breakpoints/_768up.scss */
+/* line 219, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 216, ../scss/breakpoints/_768up.scss */
+/* line 227, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -465,7 +482,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 324, ../scss/breakpoints/_768up.scss */
+/* line 335, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -475,6 +492,44 @@ mobile. Make sure to double check these!
 }
 
 /* end .footer-links */
+/* Start Mason Style Work */
+/* line 357, ../scss/breakpoints/_768up.scss */
+.newsletter_wrapper .subscribe_wrapper span {
+  width: unset;
+  font-size: larger;
+}
+
+/* line 367, ../scss/breakpoints/_768up.scss */
+.bottom_wrapper > * {
+  display: inline-block;
+}
+
+/* line 371, ../scss/breakpoints/_768up.scss */
+.sponsers_wrapper {
+  width: 60%;
+}
+/* line 374, ../scss/breakpoints/_768up.scss */
+.sponsers_wrapper img {
+  max-width: 250px;
+  width: 40%;
+  margin: 2% 4.5%;
+}
+
+/* line 382, ../scss/breakpoints/_768up.scss */
+.social_wrapper {
+  height: 100%;
+  width: 15%;
+  min-width: 120px;
+  max-width: 200px;
+  float: right;
+  margin: 35px 10%;
+}
+
+/* line 391, ../scss/breakpoints/_768up.scss */
+.social_buttons_text {
+  font-size: 20px;
+}
+
 /******************************************************************
 Site Name:
 Author:

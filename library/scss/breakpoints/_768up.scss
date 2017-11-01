@@ -32,7 +32,8 @@ HEADER STYLES
 
 .header {
 	//position:fixed; REMOVED UNTIL RESPONSIVE HEADER FIGURED OUT
-	width:100%;
+	width:98%;
+	padding: 0 1%;
 }
 
 	#logo {
@@ -50,9 +51,12 @@ nav{
 	display:inline-block;
   vertical-align: top;
 }
-
+.nav_bar{
+	float: right;
+}
 .nav {
 	border: 0;
+	
 	ul {
 		background:$black;
 		margin-top:0;
@@ -158,6 +162,13 @@ nav{
 	margin-top: 0;
 }
 
+		.hero{
+		}
+		.hero_overlay{    
+			width: 80%;
+	    padding: 5% 0;
+		}
+
 
 		.side_by_side{
 			width:50%;
@@ -177,16 +188,16 @@ nav{
 		}
 
 		.button_row {
-	    text-align: center;
+	   		text-align: center;
 
-	    .button{
+	    
+		}
+
+		.button{
 	    	display:inline-block;
 	    	padding:5px 10px;
 	    	margin:0 10px;
 	    }
-		}
-
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -335,3 +346,48 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+/* Start Mason Style Work */
+
+.footer {
+}
+
+	.newsletter_wrapper {
+
+		.subscribe_wrapper {
+			span {
+				width: unset;
+				font-size: larger;
+			}
+		}
+	}
+
+	.bottom_wrapper {
+
+
+		& > * {
+				display: inline-block;
+			}
+	}
+		.sponsers_wrapper {
+	    	width: 60%;
+
+			img {
+			    max-width: 250px;
+			    width: 40%;
+			    margin: 2% 4.5%;
+			}
+
+		}
+
+		.social_wrapper {
+			height: 100%;
+			width: 15%;
+			min-width: 120px;
+			max-width: 200px;
+			float: right;
+   			margin: 35px 10%;
+		}
+
+		.social_buttons_text {
+    		font-size: 20px;
+		}

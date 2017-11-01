@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $raleway;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -106,7 +106,7 @@ a, a:visited {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
 	/*
@@ -120,31 +120,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
-h1, .h1 {
+h1, .h1, h1 span {
 	font-size: 2.5em;
-	line-height: 1.333em;
 }
 
-h2, .h2 {
+h2, .h2, h2 span {
 	font-size: 1.75em;
-	line-height: 1.4em;
-	margin-bottom: 0.375em;
 }
 
-h3, .h3 {
-	font-size: 1.125em;
+h3, .h3, h3 span {
+	font-size: 1.5em;
 }
 
-h4, .h4 {
-	font-size: 1.1em;
-	font-weight: 700;
+h4, .h4, h4 span {
+	font-size: 1.4em;
 }
 
-h5, .h5 {
-	font-size: 0.846em;
-	line-height: 2.09em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+h5, .h5, h5 span {
+	font-size: 1.3em;
+}
+
+h6, .h6, h6 span {
+	font-size: 1.25em;
 }
 
 /*********************
@@ -259,6 +256,34 @@ POSTS & CONTENT STYLES
 	margin-top: 1.5em;
 }
 
+		.hero{
+	    background-size: cover;
+	    background-position: center;
+		}
+		.hero_overlay{    
+			width: 95%;
+	    margin: auto;
+	    padding: 3% 0;
+	    a{
+	    	background-color: $white;
+	    	color: $dark-gray;
+	    	text-transform: uppercase;
+    		padding: 12px 20px;
+    		font-size: 0.8em;
+	    }
+	    h4{
+	    	span{
+	    		border-bottom: 1px solid $white;
+	    		padding-bottom: 15px;
+	    	}
+	    }
+	    h6{
+	    	span{
+	    		background-color: $dark-gray;
+	    	}
+	    }
+		}
+
 		.side_by_side_row{
 			width:100%;
 			position:relative;
@@ -288,7 +313,7 @@ POSTS & CONTENT STYLES
 		.button_row {
 	    position: relative;
 	    padding: 25px 25px;
-
+		}
 	    .button{    
 	    	margin: 10px auto;
 		    border: 1px solid #393939;
@@ -299,8 +324,6 @@ POSTS & CONTENT STYLES
 		    display: block;
 		    text-align: center;
 	    }
-		}
-
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
@@ -982,3 +1005,84 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+
+	/* Start Mason Style Work */
+
+.footer {
+	background-color: $white;
+}
+
+	.newsletter_wrapper {
+		background-color: $blue;
+
+		.subscribe_wrapper {
+			text-align: center;
+			padding: 10px 0;
+
+			span {
+				width: 80%;
+				color: $white;
+			}
+
+			& > * {
+				margin: 0 5px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+			.subscribe_button {
+				padding: 5px 15px;
+    			background-color: $red;
+   	 			color: $white;
+    			text-transform: uppercase;
+    			text-decoration: none;
+    		}
+
+	}
+
+	.bottom_wrapper {
+
+
+		& > * {
+				display: block;
+				vertical-align: middle;
+			}
+	}
+		.sponsers_wrapper {
+	    	width: 100%;
+	    	text-align: center;
+
+			img {
+			    width: 90%;
+			    margin: 2% 5%;
+			}
+
+		}
+
+		.social_wrapper {
+			width: 90%;
+   			margin: 35px 5%;
+		}
+
+		.social_buttons_text {
+			color: $icon-gray;
+   			text-align: center;
+    		font-size: 50px;
+    		margin: 0;
+		}
+
+		.social_media_buttons {
+			font-size: 0;
+			height: 50%;
+
+			a {
+				width: 25%;
+		    	height: 100%;
+			    display: inline-block;
+			    background-size: cover;
+			    background-position: center;
+
+			}
+		}

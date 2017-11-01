@@ -32,7 +32,7 @@ body#tinymce.wp-editor {
 	@import "partials/mixins";
 
 	width: 731px;
-	font-family: $lato;
+	font-family: $raleway;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -215,6 +215,70 @@ body#tinymce.wp-editor {
 			}
 
 		}
+
+
+	&.acf-field-name-hero_text{
+		background-color:$black;
+
+    a{
+    	background-color: $white;
+    	color: $dark-gray;
+    	text-transform: uppercase;
+  		padding: 12px 20px;
+    	font-size: 0.8em;
+    }
+    h4{
+    	span{
+    		border-bottom: 1px solid $white;
+    		padding-bottom: 15px;
+    	}
+    }
+    h6{
+    	span{
+    		background-color: $dark-gray;
+    	}
+    }
+	}
+
+	
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		text-rendering: optimizelegibility;
+		font-weight: 500;
+		/*
+		if you're going to use webfonts, be sure to check your weights
+		http://css-tricks.com/watch-your-font-weight/
+		*/
+
+		/* removing text decoration from all headline links */
+		a {
+			text-decoration: none;
+		}
+	}
+
+	h1, .h1, h1 span {
+		font-size: 1.6em;
+	}
+
+	h2, .h2, h2 span {
+		font-size: 1.5em;
+	}
+
+	h3, .h3, h3 span {
+		font-size: 1.4em;
+	}
+
+	h4, .h4, h4 span {
+		font-size: 1.3em;
+	}
+
+	h5, .h5, h5 span {
+		font-size: 1.2em;
+	}
+
+	h6, .h6, h6 span {
+		font-size: 1.1em;
+	}
+
 
 
 }
