@@ -840,3 +840,62 @@ body#tinymce.wp-editor pre {
     clear: both;
   }
 }
+/* line 220, ../scss/editor-style.scss */
+body#tinymce.wp-editor.acf-field-name-hero_text {
+  background-color: #393939;
+}
+/* line 223, ../scss/editor-style.scss */
+body#tinymce.wp-editor.acf-field-name-hero_text a {
+  background-color: #fff;
+  color: #383939;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-size: 0.8em;
+}
+/* line 231, ../scss/editor-style.scss */
+body#tinymce.wp-editor.acf-field-name-hero_text h4 span {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15px;
+}
+/* line 237, ../scss/editor-style.scss */
+body#tinymce.wp-editor.acf-field-name-hero_text h6 span {
+  background-color: #383939;
+}
+/* line 244, ../scss/editor-style.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5, body#tinymce.wp-editor h6, body#tinymce.wp-editor .h6 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */
+}
+/* line 253, ../scss/editor-style.scss */
+body#tinymce.wp-editor h1 a, body#tinymce.wp-editor .h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor .h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor .h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor .h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor .h5 a, body#tinymce.wp-editor h6 a, body#tinymce.wp-editor .h6 a {
+  text-decoration: none;
+}
+/* line 258, ../scss/editor-style.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h1 span {
+  font-size: 1.6em;
+}
+/* line 262, ../scss/editor-style.scss */
+body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h2 span {
+  font-size: 1.5em;
+}
+/* line 266, ../scss/editor-style.scss */
+body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h3 span {
+  font-size: 1.4em;
+}
+/* line 270, ../scss/editor-style.scss */
+body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h4 span {
+  font-size: 1.3em;
+}
+/* line 274, ../scss/editor-style.scss */
+body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5, body#tinymce.wp-editor h5 span {
+  font-size: 1.2em;
+}
+/* line 278, ../scss/editor-style.scss */
+body#tinymce.wp-editor h6, body#tinymce.wp-editor .h6, body#tinymce.wp-editor h6 span {
+  font-size: 1.1em;
+}
