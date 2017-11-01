@@ -15,14 +15,6 @@
 						</div>
 					</div>
 					<div class="bottom_wrapper">
-						<div class="sponsers_wrapper"> 
-							<a>
-								<img src="http://lorempixel.com/400/200/">
-							</a>
-							<a>
-								<img src="http://lorempixel.com/400/200/">
-							</a>
-						</div>
 						<div class="social_wrapper">
 							<p class="social_buttons_text">
 								JOIN US ON
@@ -41,6 +33,14 @@
 									<img src="<?php echo get_template_directory_uri(); ?>/library/images/email.svg">
 								</a>
 							</div>
+						</div>
+						<div class="sponsers_wrapper"> 
+							<a>
+								<img src="http://lorempixel.com/400/200/">
+							</a>
+							<a>
+								<img src="http://lorempixel.com/400/200/">
+							</a>
 						</div>
 					</div>	
 				</div>

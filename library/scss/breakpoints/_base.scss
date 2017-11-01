@@ -963,12 +963,79 @@ FOOTER STYLES
 	/* Start Mason Style Work */
 
 .footer {
-	background-color: $white
+	background-color: $white;
 }
-	.sponsers_wrapper {
-    	
 
-		img {
-		    
+	.newsletter_wrapper {
+		background-color: $blue;
+
+		.subscribe_wrapper {
+			text-align: center;
+			padding: 10px 0;
+
+			span {
+				width: 80%;
+				color: $white;
+			}
+
+			& > * {
+				margin: 0 5px;
+				display: inline-block;
+				vertical-align: middle;
+			}
 		}
-	}	
+
+			.subscribe_button {
+				padding: 5px 15px;
+    			background-color: $red;
+   	 			color: $white;
+    			text-transform: uppercase;
+    			text-decoration: none;
+    		}
+
+	}
+
+	.bottom_wrapper {
+
+
+		& > * {
+				display: block;
+				vertical-align: middle;
+			}
+	}
+		.sponsers_wrapper {
+	    	width: 100%;
+	    	text-align: center;
+
+			img {
+			    width: 90%;
+			    margin: 2% 5%;
+			}
+
+		}
+
+		.social_wrapper {
+			width: 90%;
+   			margin: 35px 5%;
+		}
+
+		.social_buttons_text {
+			color: $icon-gray;
+   			text-align: center;
+    		font-size: 50px;
+    		margin: 0;
+		}
+
+		.social_media_buttons {
+			font-size: 0;
+			height: 50%;
+
+			a {
+				width: 25%;
+		    	height: 100%;
+			    display: inline-block;
+			    background-size: cover;
+			    background-position: center;
+
+			}
+		}

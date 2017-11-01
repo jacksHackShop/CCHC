@@ -2221,9 +2221,83 @@ view.
 */
 /* end .footer-links */
 /* Start Mason Style Work */
-/* line 940, ../scss/breakpoints/_base.scss */
+/* line 965, ../scss/breakpoints/_base.scss */
 .footer {
   background-color: #fff;
+}
+
+/* line 969, ../scss/breakpoints/_base.scss */
+.newsletter_wrapper {
+  background-color: #163852;
+}
+/* line 972, ../scss/breakpoints/_base.scss */
+.newsletter_wrapper .subscribe_wrapper {
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 976, ../scss/breakpoints/_base.scss */
+.newsletter_wrapper .subscribe_wrapper span {
+  width: 80%;
+  color: #fff;
+}
+/* line 981, ../scss/breakpoints/_base.scss */
+.newsletter_wrapper .subscribe_wrapper > * {
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 988, ../scss/breakpoints/_base.scss */
+.newsletter_wrapper .subscribe_button {
+  padding: 5px 15px;
+  background-color: #c03329;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 1001, ../scss/breakpoints/_base.scss */
+.bottom_wrapper > * {
+  display: block;
+  vertical-align: middle;
+}
+
+/* line 1006, ../scss/breakpoints/_base.scss */
+.sponsers_wrapper {
+  width: 100%;
+  text-align: center;
+}
+/* line 1010, ../scss/breakpoints/_base.scss */
+.sponsers_wrapper img {
+  width: 90%;
+  margin: 2% 5%;
+}
+
+/* line 1017, ../scss/breakpoints/_base.scss */
+.social_wrapper {
+  width: 90%;
+  margin: 35px 5%;
+}
+
+/* line 1022, ../scss/breakpoints/_base.scss */
+.social_buttons_text {
+  color: #4D4D4F;
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+}
+
+/* line 1029, ../scss/breakpoints/_base.scss */
+.social_media_buttons {
+  font-size: 0;
+  height: 50%;
+}
+/* line 1033, ../scss/breakpoints/_base.scss */
+.social_media_buttons a {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
 }
 
 /*********************
@@ -2559,57 +2633,29 @@ you can add resource intensive styles.
 
   /* end .footer-links */
   /* Start Mason Style Work */
-  /* line 340, ../scss/breakpoints/_768up.scss */
-  .footer {
-    background-color: #fff;
+  /* line 353, ../scss/breakpoints/_768up.scss */
+  .newsletter_wrapper .subscribe_wrapper span {
+    width: unset;
+    font-size: larger;
   }
 
-  /* line 344, ../scss/breakpoints/_768up.scss */
-  .newsletter_wrapper {
-    background-color: #163852;
-  }
-  /* line 348, ../scss/breakpoints/_768up.scss */
-  .newsletter_wrapper p {
-    color: #fff;
-  }
-  /* line 352, ../scss/breakpoints/_768up.scss */
-  .newsletter_wrapper .subscribe_wrapper {
-    text-align: center;
-    padding: 10px 0;
-  }
-  /* line 356, ../scss/breakpoints/_768up.scss */
-  .newsletter_wrapper .subscribe_wrapper > * {
-    margin: 0 5px;
-    display: inline-block;
-    vertical-align: middle;
-  }
   /* line 363, ../scss/breakpoints/_768up.scss */
-  .newsletter_wrapper .subscribe_button {
-    padding: 5px 15px;
-    background-color: #c03329;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  /* line 376, ../scss/breakpoints/_768up.scss */
   .bottom_wrapper > * {
     display: inline-block;
-    vertical-align: middle;
   }
 
-  /* line 381, ../scss/breakpoints/_768up.scss */
+  /* line 367, ../scss/breakpoints/_768up.scss */
   .sponsers_wrapper {
     width: 60%;
   }
-  /* line 384, ../scss/breakpoints/_768up.scss */
+  /* line 370, ../scss/breakpoints/_768up.scss */
   .sponsers_wrapper img {
     max-width: 250px;
     width: 40%;
     margin: 2% 4.5%;
   }
 
-  /* line 392, ../scss/breakpoints/_768up.scss */
+  /* line 378, ../scss/breakpoints/_768up.scss */
   .social_wrapper {
     height: 100%;
     width: 15%;
@@ -2619,26 +2665,9 @@ you can add resource intensive styles.
     margin: 35px 10%;
   }
 
-  /* line 401, ../scss/breakpoints/_768up.scss */
+  /* line 387, ../scss/breakpoints/_768up.scss */
   .social_buttons_text {
-    color: #4D4D4F;
-    text-align: center;
     font-size: 20px;
-    margin: 0;
-  }
-
-  /* line 408, ../scss/breakpoints/_768up.scss */
-  .social_media_buttons {
-    font-size: 0;
-    height: 50%;
-  }
-  /* line 412, ../scss/breakpoints/_768up.scss */
-  .social_media_buttons a {
-    width: 25%;
-    height: 100%;
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
   }
 }
 /*********************
