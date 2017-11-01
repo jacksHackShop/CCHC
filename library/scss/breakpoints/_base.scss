@@ -534,6 +534,53 @@ POSTS & CONTENT STYLES
 		margin: 0;
 	}
 
+/********************************************
+EVENT STYLES BY CHRIS
+*********************************************/
+
+.event-single {
+	width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+	color: $text-white;
+
+	header {
+		color: $title-grey;
+		
+		.event-date {
+			color: $date-blue;
+		}
+	}
+
+	.image-gallery {
+		background-color: $gallery-grey;
+	}
+
+	.subscribe {
+    background-color: $subscribe-blue;
+    display: flex;
+    width: 100%;
+
+    label {
+		    padding: 10px;
+		    align-self: center;
+		}
+
+    input {
+	    margin: 10px;
+	    border-radius: 0px;
+	    color: $placeholder-text;
+		}
+
+		.sign_up_button {
+    background-color: $signup-red;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+		}
+	}
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
