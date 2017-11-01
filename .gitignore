@@ -57,5 +57,4 @@ temp/
 *.codekit
 *.scssc
 
-
-/library/css/*.css
+*.css
