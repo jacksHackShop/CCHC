@@ -70,6 +70,7 @@
 						)); ?>
 
 					</nav>
+					<a href="http://google.com" target="_blank" class="button white donate_button">Donate</a>
 
 				</div>
 

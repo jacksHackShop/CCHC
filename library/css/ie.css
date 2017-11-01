@@ -414,8 +414,9 @@ nav {
 .button_row {
   text-align: center;
 }
-/* line 189, ../scss/breakpoints/_768up.scss */
-.button_row .button {
+
+/* line 192, ../scss/breakpoints/_768up.scss */
+.button {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
@@ -481,31 +482,31 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 /* Start Mason Style Work */
-/* line 340, ../scss/breakpoints/_768up.scss */
+/* line 347, ../scss/breakpoints/_768up.scss */
 .footer {
   background-color: #fff;
 }
 
-/* line 344, ../scss/breakpoints/_768up.scss */
+/* line 351, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper {
   background-color: #163852;
 }
-/* line 348, ../scss/breakpoints/_768up.scss */
+/* line 355, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper p {
   color: #fff;
 }
-/* line 352, ../scss/breakpoints/_768up.scss */
+/* line 359, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper .subscribe_wrapper {
   text-align: center;
   padding: 10px 0;
 }
-/* line 356, ../scss/breakpoints/_768up.scss */
+/* line 363, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper .subscribe_wrapper > * {
   margin: 0 5px;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 363, ../scss/breakpoints/_768up.scss */
+/* line 370, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper .subscribe_button {
   padding: 5px 15px;
   background-color: #c03329;
@@ -514,24 +515,24 @@ mobile. Make sure to double check these!
   text-decoration: none;
 }
 
-/* line 376, ../scss/breakpoints/_768up.scss */
+/* line 383, ../scss/breakpoints/_768up.scss */
 .bottom_wrapper > * {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 388, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper {
   width: 60%;
 }
-/* line 384, ../scss/breakpoints/_768up.scss */
+/* line 391, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper img {
   max-width: 250px;
   width: 40%;
   margin: 2% 4.5%;
 }
 
-/* line 392, ../scss/breakpoints/_768up.scss */
+/* line 399, ../scss/breakpoints/_768up.scss */
 .social_wrapper {
   height: 100%;
   width: 15%;
@@ -541,7 +542,7 @@ mobile. Make sure to double check these!
   margin: 35px 10%;
 }
 
-/* line 401, ../scss/breakpoints/_768up.scss */
+/* line 408, ../scss/breakpoints/_768up.scss */
 .social_buttons_text {
   color: #4D4D4F;
   text-align: center;
@@ -549,12 +550,12 @@ mobile. Make sure to double check these!
   margin: 0;
 }
 
-/* line 408, ../scss/breakpoints/_768up.scss */
+/* line 415, ../scss/breakpoints/_768up.scss */
 .social_media_buttons {
   font-size: 0;
   height: 50%;
 }
-/* line 412, ../scss/breakpoints/_768up.scss */
+/* line 419, ../scss/breakpoints/_768up.scss */
 .social_media_buttons a {
   width: 25%;
   height: 100%;
