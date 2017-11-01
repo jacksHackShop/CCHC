@@ -381,34 +381,40 @@ nav {
   margin-top: 0;
 }
 
-/* line 162, ../scss/breakpoints/_768up.scss */
+/* line 163, ../scss/breakpoints/_768up.scss */
+.hero_overlay {
+  width: 80%;
+  padding: 5% 0;
+}
+
+/* line 169, ../scss/breakpoints/_768up.scss */
 .side_by_side {
   width: 50%;
   display: inline-block;
 }
-/* line 166, ../scss/breakpoints/_768up.scss */
+/* line 173, ../scss/breakpoints/_768up.scss */
 .side_by_side.left {
   float: left;
 }
-/* line 168, ../scss/breakpoints/_768up.scss */
+/* line 175, ../scss/breakpoints/_768up.scss */
 .side_by_side.right {
   float: right;
 }
-/* line 170, ../scss/breakpoints/_768up.scss */
+/* line 177, ../scss/breakpoints/_768up.scss */
 .side_by_side.text {
   padding: 0% 6%;
   height: 49vw;
 }
-/* line 174, ../scss/breakpoints/_768up.scss */
+/* line 181, ../scss/breakpoints/_768up.scss */
 .side_by_side.image {
   height: 49vw;
 }
 
-/* line 179, ../scss/breakpoints/_768up.scss */
+/* line 186, ../scss/breakpoints/_768up.scss */
 .button_row {
   text-align: center;
 }
-/* line 182, ../scss/breakpoints/_768up.scss */
+/* line 189, ../scss/breakpoints/_768up.scss */
 .button_row .button {
   display: inline-block;
   padding: 5px 10px;
@@ -418,28 +424,28 @@ nav {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 194, ../scss/breakpoints/_768up.scss */
+/* line 201, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 198, ../scss/breakpoints/_768up.scss */
+/* line 205, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 203, ../scss/breakpoints/_768up.scss */
+/* line 210, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 208, ../scss/breakpoints/_768up.scss */
+/* line 215, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 216, ../scss/breakpoints/_768up.scss */
+/* line 223, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -464,7 +470,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 324, ../scss/breakpoints/_768up.scss */
+/* line 331, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
