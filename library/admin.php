@@ -144,4 +144,12 @@ function bones_custom_admin_footer() {
 // adding it to the admin area
 add_filter( 'admin_footer_text', 'bones_custom_admin_footer' );
 
+
+
+// adding admin styles!
+add_action( 'admin_enqueue_scripts', 'load_admin_style');
+function load_admin_style() {
+    wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false );
+}
+
 ?>
