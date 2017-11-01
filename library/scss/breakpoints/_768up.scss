@@ -32,7 +32,8 @@ HEADER STYLES
 
 .header {
 	//position:fixed; REMOVED UNTIL RESPONSIVE HEADER FIGURED OUT
-	width:100%;
+	width:98%;
+	padding: 0 1%;
 }
 
 	#logo {
@@ -50,9 +51,12 @@ nav{
 	display:inline-block;
   vertical-align: top;
 }
-
+.nav_bar{
+	float: right;
+}
 .nav {
 	border: 0;
+	
 	ul {
 		background:$black;
 		margin-top:0;
