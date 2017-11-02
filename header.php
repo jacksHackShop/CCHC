@@ -54,7 +54,7 @@
 					<?php // bloginfo('description'); ?>
 
 					<div class="nav_bar">
-						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<nav id="menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
 	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -70,7 +70,10 @@
 							)); ?>
 
 						</nav>
-						<a href="http://google.com" target="_blank" class="button white donate_button">Donate</a>
+						<a href="http://google.com" target="_blank" id ="donate_button" class="button white">Donate</a>
+						<div id="ham" onclick="document.getElementById('menu').classList.toggle('show');">
+							<img src="<?php echo get_template_directory_uri();?>/library/images/menu.svg">
+						</div>
 					</div>
 				</div>
 

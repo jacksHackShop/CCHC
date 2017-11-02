@@ -159,6 +159,9 @@ HEADER STYLES
 		a {
 			color: $black;
 		}
+		img{
+			width: 70%;
+		}
 	}
 
 /*********************
@@ -177,6 +180,7 @@ and more scalable.
 	border-bottom: 0;
 	margin: 0;
 	text-transform: uppercase;
+	
 
 	li {
 
@@ -243,6 +247,35 @@ and more scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+
+#ham {
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  img{
+  	width: 30px;
+  	height: 30px;
+  }
+}
+#ham:hover {
+  background-color:white;
+}
+
+#menu{
+  height:90%; 
+  right:0;
+  width:0;
+  position:fixed;
+  background-color:white;
+  transition:width 1s;
+  z-index: 99;
+  opacity: 0.9;
+}
+#menu.show{
+  width:80%;
+}
+
 
 
 /*********************
