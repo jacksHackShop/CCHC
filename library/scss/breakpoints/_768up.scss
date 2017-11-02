@@ -49,11 +49,14 @@ NAVIGATION STYLES
 
 nav{
 	display:inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .nav_bar{
 	float: right;
+	padding: 10px 0;
+	display: inline-block;
 }
+
 .nav {
 	border: 0;
 	
@@ -198,6 +201,11 @@ nav{
 	    	padding:5px 10px;
 	    	margin:0 10px;
 	    }
+
+	    .donate_button{
+			padding: 2px 5px;
+		}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
