@@ -562,21 +562,41 @@ EVENT STYLES BY CHRIS
 *********************************************/
 
 .event-single {
-	width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
 	color: $text-white;
 
 	header {
 		color: $title-grey;
-		
+		margin-left: 10%;
+    margin-top: 65px;
+    line-height: 125%;
+    font-size: 18px;
+
 		.event-date {
 			color: $date-blue;
+			font-size: 28px;
 		}
+
+    .event-title {
+    	margin-top: 20px;
+	    font-weight: 600;
+    }
+
+    #location {
+    	margin-top: 20px;
+			
+			.event-general-location {
+				font-weight: 600;
+			}
+
+			.event-specific-location {
+				font-weight: 200;
+			}
+    }
 	}
 
 	.image-gallery {
 		background-color: $gallery-grey;
+		margin-top: 40px;
 	}
 
 	.subscribe {
@@ -604,6 +624,34 @@ EVENT STYLES BY CHRIS
     font-weight: bold;
 		}
 	}
+}
+
+.event-item {
+    width: 400px;
+    height: 350px;
+    padding: 30px;
+    
+    a {
+    	text-decoration: none;
+    	color: $title-grey;
+    }
+
+    img {
+    	width: 320px;
+    	height: 200px;
+    }
+
+    p {
+    	margin: 0px;
+    }
+
+    .specific_location {
+			font-weight: 200;  /*something is up with the font weights.  this is the lightest*/
+    }
+
+    .general_location {
+    	font-weight: 600;
+    }
 }
 
 /******************************************************************
