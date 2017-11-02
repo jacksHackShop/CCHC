@@ -57,11 +57,11 @@
 								</header>
 
 								<div class="image-gallery">
-									<?php $images = get_field('image_gallery'); 
+									<?php 
+									$images = get_field('image_gallery'); 
 									foreach ($images as $image){
 										var_dump($image);
 									}
-
 									?>
 								</div>
 							

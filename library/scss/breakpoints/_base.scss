@@ -72,6 +72,7 @@ LAYOUT & GRID STYLES
 
 .wrap {
 	margin: 0 auto;
+	overflow-x:hidden;
 }
 
 /*********************
@@ -252,6 +253,10 @@ POSTS & CONTENT STYLES
 								--><div class="side_by_side text right"><?php echo get_field("side_by_side_text_1"); ?></div>
 							</div>
 *********************/
+
+.centered{
+	text-align: center;
+}
 
 #content {
 	margin-top: 1.5em;
@@ -631,6 +636,11 @@ EVENT STYLES BY CHRIS
   width: 400px;
   height: 350px;
   padding: 30px;
+
+  /*JACK CODE*/
+    text-align: left;
+    display: inline-block;
+  /*END*/
   
   a {
   	text-decoration: none;

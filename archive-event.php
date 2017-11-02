@@ -32,7 +32,7 @@
 
 							} ?>
 
-						<article id="post-<?php the_ID(); ?>" role="article" class="m-all t-1of2 d-1of3">
+						<article id="post-<?php the_ID(); ?>" role="article" class="m-all t-1of2 d-1of3 centered">
 								<div class="event-item">
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 										<p class="h2 <?php if (!$year){echo "empty-year";} ?>"><?php echo $year; ?></p>
