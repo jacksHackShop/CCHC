@@ -262,6 +262,47 @@ POSTS & CONTENT STYLES
 	margin-top: 1.5em;
 }
 
+		
+
+		.image-gallery {
+			background-color: $gallery-grey;
+			margin: 40px 0;
+			padding: 70px 0;
+			font-size:0;
+
+			.gal_nav{
+				display:inline-block;
+				width:10%;
+				font-size:50px;
+    		vertical-align: top;
+    		cursor:pointer;
+				text-align:center;
+				vertical-align: middle;
+
+				&.prev{
+				}
+				&.next{
+				}
+			}
+
+			.gallery_images{
+				display:inline-block;
+				width:80%;
+				overflow:hidden;
+   	 		white-space: nowrap;
+				vertical-align: middle;
+				.gallery_image{
+					display:inline-block;
+    			vertical-align: middle;
+					width:100%;
+					img{
+						width:100%;
+					}
+				}
+			}
+		}
+
+
 		.hero{
 	    background-size: cover;
 	    background-position: center;
@@ -598,11 +639,6 @@ EVENT STYLES BY CHRIS
 				font-weight: 200;
 			}
     }
-	}
-
-	.image-gallery {
-		background-color: $gallery-grey;
-		margin-top: 40px;
 	}
 
 	.subscribe {

@@ -57,12 +57,24 @@
 								</header>
 
 								<div class="image-gallery">
+									<span class="gal_nav prev" 
+												onclick="this.parentElement.children[1].scrollLeft -= this.parentElement.children[1].clientWidth;">
+										&#60;
+									</span>
+									<ul class="gallery_images">
 									<?php 
-									$images = get_field('image_gallery'); 
-									foreach ($images as $image){
-										var_dump($image);
-									}
+										$images = get_field('image_gallery'); 
+										foreach( $images as $image ){
+										?>
+											<li class="gallery_image"><img src='<?php echo $image["url"];?>'></li>	
+										<?php
+										}
 									?>
+									</ul>
+									<span class="gal_nav next"
+												onclick="console.log(this);this.parentElement.children[1].scrollLeft += this.parentElement.children[1].clientWidth;">
+										&#62;
+									</span>
 								</div>
 							
 							</article>
