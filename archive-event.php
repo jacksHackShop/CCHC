@@ -23,12 +23,19 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							$date = get_field('date_of_event');
 							preg_match('/\d{4}/', $date, $year_match);
-							$year = $year_match[0];?>
+
+							if (isset($current_year) && $year_match[0] == $current_year){
+								$year = "";
+							} else{
+								// set both year and current year to our match
+								$year = $current_year = $year_match[0];
+
+							} ?>
 
 						<article id="post-<?php the_ID(); ?>" role="article" class="m-all t-1of2 d-1of3">
 								<div class="event-item">
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-										<p class="h2"><?php echo $year; ?></p>
+										<p class="h2 <?php if (!$year){echo "empty-year";} ?>"><?php echo $year; ?></p>
 										<img src="<?php the_field('thumbnail'); ?>">
 										<p class="general_location"><?php echo strtoupper(get_field("general_location")); ?></p>
 										<p class="specific_location"><?php the_field("specific_location"); ?></p>

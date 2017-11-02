@@ -627,24 +627,24 @@ EVENT STYLES BY CHRIS
 }
 
 .event-item {
-    width: 400px;
-    height: 350px;
-    padding: 30px;
-    
-    a {
-    	text-decoration: none;
-    	color: $title-grey;
-    }
+  width: 400px;
+  height: 350px;
+  padding: 30px;
+  
+  a {
+  	text-decoration: none;
+  	color: $title-grey;
 
-    img {
-    	width: 320px;
-    	height: 200px;
-    }
+		img {
+  	width: 320px;
+  	height: 200px;
+  	}
 
     p {
     	margin: 0px;
     }
 
+ 		
     .specific_location {
 			font-weight: 200;  /*something is up with the font weights.  this is the lightest*/
     }
@@ -652,6 +652,7 @@ EVENT STYLES BY CHRIS
     .general_location {
     	font-weight: 600;
     }
+  } 
 }
 
 /******************************************************************

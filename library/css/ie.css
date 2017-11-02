@@ -530,6 +530,14 @@ mobile. Make sure to double check these!
   font-size: 20px;
 }
 
+/* END MASON */
+/* Start Chris style */
+/* line 398, ../scss/breakpoints/_768up.scss */
+.event-item a .empty-year {
+  margin-top: 40px;
+}
+
+/* End chris style */
 /******************************************************************
 Site Name:
 Author:
