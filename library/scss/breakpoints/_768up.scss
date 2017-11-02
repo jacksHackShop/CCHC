@@ -48,8 +48,8 @@ NAVIGATION STYLES
 *********************/
 
 nav{
-	display:inline-block;
-  vertical-align: middle;
+	display: inline-block;
+ 	vertical-align: middle;
 }
 .nav_bar{
 	float: right;
@@ -157,9 +157,15 @@ nav{
 } /* end .nav */
 
 
-
-
-
+#menu{
+	height:auto;
+	width:auto;
+ 	position:relative;
+	background-color:white;
+}
+#ham {
+	display: none;
+}
 
 #content {
 	margin-top: 0;
@@ -202,8 +208,10 @@ nav{
 	    	margin:0 10px;
 	    }
 
-	    .donate_button{
+	    #donate_button{
 			padding: 2px 5px;
+			text-align: center;
+			display:inline-block;
 		}
 
 /*********************
