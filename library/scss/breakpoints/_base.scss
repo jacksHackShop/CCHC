@@ -155,12 +155,15 @@ HEADER STYLES
 
 	#logo {
 		margin: 0.75em 0;
+		vertical-align: top;		
 
 		a {
 			color: $black;
 		}
 		img{
 			width: 70%;
+			float: left;
+			margin-top: 4px;
 		}
 	}
 
@@ -175,6 +178,11 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+
+.nav_bar{
+	float:right;
+	vertical-align: top;
+}
 
 .nav {
 	border-bottom: 0;
@@ -248,14 +256,26 @@ and more scalable.
 
 } /* end .nav */
 
+#donate_button{
+	padding: 1.5px 3.5px;
+	text-align: center;
+	display:inline-block;
+	font-size: 10px;
+	vertical-align: top;
+	margin-top: 5px;
+}
 
 #ham {
-  width:30px;
-  height:30px;
+  width:40px;
+  height:40px;
   cursor:pointer;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+
   img{
-  	width: 30px;
-  	height: 30px;
+  	max-width:100%;
+	max-height:100%;
   }
 }
 #ham:hover {
@@ -266,6 +286,7 @@ and more scalable.
   height:90%; 
   right:0;
   width:0;
+  margin-top: 41px;
   position:fixed;
   background-color:white;
   transition:width 1s;
@@ -291,9 +312,7 @@ POSTS & CONTENT STYLES
 	text-align: center;
 }
 
-#content {
-	margin-top: 1.5em;
-}
+
 
 		
 

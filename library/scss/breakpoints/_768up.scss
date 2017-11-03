@@ -40,7 +40,13 @@ HEADER STYLES
 		display:inline-block;
 		width:30%;
 		min-width:300px;
-		vertical-align:middle;
+		vertical-align:middle;		
+
+		img{
+			width: 100%;
+			float: left;
+			margin-top: 0;
+		}
 	}
 
 /*********************
@@ -53,8 +59,20 @@ nav{
 }
 .nav_bar{
 	float: right;
-	padding: 10px 0;
+	padding: 5px 0;
 	display: inline-block;
+	font-size: 110%;
+	font-weight: 600;
+}
+
+
+#menu{
+	height: auto;
+	width: auto;
+ 	position: relative ;
+	background-color: white;
+	margin-top: 0;
+
 }
 
 .nav {
@@ -157,12 +175,7 @@ nav{
 } /* end .nav */
 
 
-#menu{
-	height:auto;
-	width:auto;
- 	position:relative;
-	background-color:white;
-}
+
 #ham {
 	display: none;
 }
@@ -209,9 +222,12 @@ nav{
 	    }
 
 	    #donate_button{
-			padding: 2px 5px;
+			padding: 2px 7px;
 			text-align: center;
 			display:inline-block;
+			vertical-align: middle;
+			font-size: 100%;
+			margin-top: 0;
 		}
 
 /*********************
@@ -335,6 +351,16 @@ SIDEBARS & ASIDES
 	.textwidget {}
 	.widget_text {}
 	.textwidget p {}
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 0.2em;
+}
+
 
 
 /*********************
