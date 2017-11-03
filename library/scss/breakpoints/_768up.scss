@@ -189,6 +189,13 @@ nav{
 		.hero_overlay{    
 			width: 80%;
 	    padding: 5% 0;
+	    
+	    h4{
+	    	span{
+	    		border-bottom: 1px solid $white;
+	    		padding-bottom: 10px;
+	    	}
+	    }
 		}
 
 
