@@ -118,3 +118,31 @@ jQuery(document).ready(function($) {
 
 
 }); /* end of as page load scripts */
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  var galleries = document.getElementsByClassName('image-gallery') || [];
+
+  for( var i = 0; i < galleries.length; i++ ){
+    var this_gallery = galleries[i];
+    this_gallery.children[0].addEventListener('click',set_gallery_to.bind( this_gallery, this_gallery.dataset.imageTarget * 1 - 1 ));
+    this_gallery.children[2].addEventListener('click',set_gallery_to.bind( this_gallery, this_gallery.dataset.imageTarget * 1 + 1 ));
+
+    window.setInterval(function(){ 
+      
+    }, 15);
+  }
+});
+
+function set_gallery_to( index ){
+  var this_gallery = this;
+  var image_lis = this_gallery.children[1];
+  if( index <= 0 || index >= image_lis.length )
+    return false;
+
+}
+
+/*
+this.parentElement.children[1].style.left += this.parentElement.children[1].clientWidth;
+*/

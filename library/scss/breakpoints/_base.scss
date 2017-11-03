@@ -301,7 +301,7 @@ POSTS & CONTENT STYLES
 			background-color: $gallery-grey;
 			margin: 40px 0;
 			padding: 70px 0;
-			font-size:0;
+			font-size: 0;
 
 			.gal_nav{
 				display:inline-block;
@@ -316,6 +316,9 @@ POSTS & CONTENT STYLES
 				}
 				&.next{
 				}
+				&.faded{
+					opacity:.5;
+				}
 			}
 
 			.gallery_images{
@@ -324,14 +327,17 @@ POSTS & CONTENT STYLES
 				overflow:hidden;
    	 		white-space: nowrap;
 				vertical-align: middle;
-				.gallery_image{
-					display:inline-block;
-    			vertical-align: middle;
-					width:100%;
-					img{
-						width:100%;
-					}
+				ul{
+					transition: margin-left .5s;
 				}
+					.gallery_image{
+						display:inline-block;
+	    			vertical-align: middle;
+						width:100%;
+						img{
+							width:100%;
+						}
+					}
 			}
 		}
 
