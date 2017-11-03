@@ -35,12 +35,22 @@
 							</div>
 						</div>
 						<div class="sponsers_wrapper"> 
-							<a>
-								<img src="http://lorempixel.com/400/200/">
-							</a>
-							<a>
-								<img src="http://lorempixel.com/400/200/">
-							</a>
+							<?php 
+								$query_image_args = array(
+								    'post_type' => 'attachment',
+								    'post_mime_type' => 'image',
+								    'posts_per_page' => -1,
+								    'category_name' => 'sponsor-image'
+								);
+
+								$sponsor_images = get_posts($query_image_args);
+								foreach($sponsor_images as $sponsor_image) {
+									echo '<a><img src="';
+									echo wp_get_attachment_url($sponsor_image->ID);
+									echo '"></a>';
+								}
+							?>
+
 						</div>
 					</div>	
 				</div>
