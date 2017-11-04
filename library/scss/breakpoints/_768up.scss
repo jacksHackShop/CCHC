@@ -433,6 +433,16 @@ mobile. Make sure to double check these!
 		.social_buttons_text {
     		font-size: 20px;
 		}
+.committee_list_row {
+	background-color: $gray;
+	text-align: center;
+}
+	.committee_list {
+		display: inline-block;
+		vertical-align: top;
+		margin: 2.5% 5%;
+		text-align: left;
+	}
 /* END MASON */
 
 /* Start Chris style */
