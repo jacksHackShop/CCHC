@@ -80,11 +80,16 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $link-color;
+	
+	/*
+	color: $link-color; 
+	*/
 
 	/* on hover */
 	&:hover, &:focus {
+		/*
 		color: $link-hover;
+		*/
 	}
 
 	/* on click */
@@ -424,10 +429,10 @@ POSTS & CONTENT STYLES
 	    position: relative;
 	    padding: 25px 25px;
 		}
-	    .button{    
+	    .button, .button:visited{    
 	    	margin: 10px auto;
-		    border: 1px solid #393939;
-		    color: #393939;
+	    	color: $icon_gray;
+		    border: 1px solid $icon_gray;
 		    text-decoration: none;
 		    text-transform: uppercase;
 		    padding: 30px;
