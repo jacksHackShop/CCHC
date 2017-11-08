@@ -37,10 +37,12 @@ HEADER STYLES
 }
 
 	#logo {
+
 		display:inline-block;
 		width:30%;
 		min-width:300px;
-		vertical-align:middle;		
+		vertical-align:middle;
+		float: left;		
 
 		img{
 			width: 100%;
@@ -63,6 +65,9 @@ nav{
 	display: inline-block;
 	font-size: 110%;
 	font-weight: 600;
+	width: 70%;
+	vertical-align: middle;
+    padding: 0;
 }
 
 

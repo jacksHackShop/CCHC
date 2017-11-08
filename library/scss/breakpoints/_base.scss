@@ -80,11 +80,16 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $link-color;
+	
+	/*
+	color: $link-color; 
+	*/
 
 	/* on hover */
 	&:hover, &:focus {
+		/*
 		color: $link-hover;
+		*/
 	}
 
 	/* on click */
@@ -154,16 +159,18 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 0.75em 0;
-		vertical-align: top;		
+		vertical-align: middle;
+		width: 50%;
+		height: auto;
+		display: inline-block;		
+		padding-top: 0.8%;
 
 		a {
 			color: $black;
 		}
 		img{
-			width: 70%;
+			width: 100%;
 			float: left;
-			margin-top: 4px;
 		}
 	}
 
@@ -182,6 +189,8 @@ and more scalable.
 .nav_bar{
 	float:right;
 	vertical-align: top;
+	width: 25%;
+	text-align:right;
 }
 
 .nav {
@@ -257,21 +266,22 @@ and more scalable.
 } /* end .nav */
 
 #donate_button{
-	padding: 1.5px 3.5px;
+	padding: 3% 4%;
 	text-align: center;
 	display:inline-block;
-	font-size: 10px;
-	vertical-align: top;
-	margin-top: 5px;
+	font-size: 0.5em;
+	vertical-align: middle;
+	margin: 0;
+	line-height: 100%;
+
 }
 
 #ham {
-  width:40px;
-  height:40px;
+  width:27%;
   cursor:pointer;
   display: inline-block;
-  vertical-align: top;
-  margin-top: 2px;
+  vertical-align: middle;
+  padding-top: 3%;
 
   img{
   	max-width:100%;
@@ -286,7 +296,7 @@ and more scalable.
   height:90%; 
   right:0;
   width:0;
-  margin-top: 41px;
+  margin-top: 1.6em;
   position:fixed;
   background-color:white;
   transition:width 1s;
@@ -419,10 +429,10 @@ POSTS & CONTENT STYLES
 	    position: relative;
 	    padding: 25px 25px;
 		}
-	    .button{    
+	    .button, .button:visited{    
 	    	margin: 10px auto;
-		    border: 1px solid #393939;
-		    color: #393939;
+	    	color: $icon_gray;
+		    border: 1px solid $icon_gray;
 		    text-decoration: none;
 		    text-transform: uppercase;
 		    padding: 30px;
