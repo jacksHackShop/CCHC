@@ -1162,6 +1162,14 @@ FOOTER STYLES
 
 
 	/* Start Mason Style Work */
+.image-gallery {
+	&.about {
+		background-color: $white;	
+	    width: 80%;	
+	    margin: 0 10%;
+	}
+} 
+
 .about_text_row {
 	background-color: $about-gray;
 	margin: 5px 0;
