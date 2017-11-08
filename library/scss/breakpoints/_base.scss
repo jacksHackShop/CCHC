@@ -1172,6 +1172,17 @@ FOOTER STYLES
 
 
 	/* Start Mason Style Work */
+.committee_list_row {
+	background-color: $gray;
+	text-align: center;
+}
+	
+	.committee_list {
+		display: block;
+		vertical-align: top;
+		margin: 5% 5%;
+		text-align: center;
+	}
 
 .footer {
 	background-color: $white;
@@ -1250,3 +1261,4 @@ FOOTER STYLES
 
 			}
 		}
+

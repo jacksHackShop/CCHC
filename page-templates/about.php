@@ -24,6 +24,26 @@
 								<a href="<?php echo get_field("button_1_url"); ?>" target="_blank" class="button white"><?php echo get_field("button_1_label"); ?></a>
 								<a href="<?php echo get_field("button_2_url"); ?>" target="_blank" class="button white"><?php echo get_field("button_2_label"); ?></a>
 							</div>
+							<div class="committee_list_row">
+								<?php 
+								if(have_rows("committee_list")): ?>
+									<?php
+									while(have_rows("committee_list")): the_row(); ?>
+										<div class="committee_list">	
+											<h3 style='margin-bottom: 0;'><?php the_sub_field("heading"); ?></h3>
+											<?php 
+											if(have_rows("members")): ?>
+												<ul style='margin: 0;'>
+												<?php
+												while(have_rows("members")): the_row(); ?>
+													<li> <?php the_sub_field("member_name") ?> </li>
+												<?php endwhile; ?>
+												</ul>
+											<?php endif; ?>
+										</div>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							</div>
 
 						</main>
 
