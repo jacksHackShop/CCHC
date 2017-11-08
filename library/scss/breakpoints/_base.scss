@@ -1162,6 +1162,21 @@ FOOTER STYLES
 
 
 	/* Start Mason Style Work */
+.about_text_row {
+	background-color: $about-gray;
+	margin: 5px 0;
+	padding: 10px 0;
+
+	& > * {
+		margin: 0 5%;
+		padding: 10px 0;
+	}
+
+}
+
+
+
+
 .committee_list_row {
 	background-color: $gray;
 	text-align: center;

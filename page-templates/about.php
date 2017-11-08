@@ -24,6 +24,14 @@
 								<a href="<?php echo get_field("button_1_url"); ?>" target="_blank" class="button white"><?php echo get_field("button_1_label"); ?></a>
 								<a href="<?php echo get_field("button_2_url"); ?>" target="_blank" class="button white"><?php echo get_field("button_2_label"); ?></a>
 							</div>
+							<div class="about_text_row">
+								<h4> <?php echo get_field("about_heading_1"); ?> </h4>
+								<p> <?php echo get_field("about_text_1"); ?> </p>
+							</div>
+							<div class="about_text_row">
+								<h4> <?php echo get_field("about_heading_2"); ?> </h4>
+								<p> <?php echo get_field("about_text_2"); ?> </p>
+							</div>
 							<div class="committee_list_row">
 								<?php 
 								if(have_rows("committee_list")): ?>
