@@ -81,10 +81,6 @@ LINK STYLES
 
 a, a:visited {
 	
-	/*
-	color: $link-color; 
-	*/
-
 	/* on hover */
 	&:hover, &:focus {
 		/*
@@ -104,7 +100,9 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
+		/*
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+		*/
 	}
 }
 
@@ -403,14 +401,15 @@ POSTS & CONTENT STYLES
 			width:100%;
 			position:relative;
 			display:block;
-			&.blue{
+			&.blue, a{
 				background-color:$blue;
 				color:$white;
 			}
-			&.gray{
+			&.gray, a{
 				background-color:$gray;
 				color:$black;
 			}
+
 		}
 		.side_by_side{
 			width:100%;
