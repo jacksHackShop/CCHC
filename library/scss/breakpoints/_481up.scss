@@ -101,6 +101,23 @@ POSTS & CONTENT STYLES
 
 } /* end .entry-content */
 
+.side_by_side{
+	width:50%;
+	display:inline-block;
+
+	&.left{ float:left; }
+
+	&.right{ float:right; }
+
+	&.text{ 
+		padding: 0% 3%;
+		height:49vw;
+	}
+	&.image{
+		height:49vw;
+	}
+}
+
 /*********************
 FOOTER STYLES
 *********************/
