@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var images_list = this_gallery.children[1];
     this_gallery.children[0].addEventListener('click',change_gallery_target.bind( this_gallery, -1 ));
     this_gallery.children[2].addEventListener('click',change_gallery_target.bind( this_gallery, 1 ));
+    this_gallery.children[1].children[0].classList.add('current');
 
     window.setInterval(function(){ 
       var diff = images_list.clientWidth * this_gallery.dataset.imageTarget - images_list.scrollLeft;
@@ -156,6 +157,10 @@ function change_gallery_target( change_by ){
   var image_lis = this_gallery.children[1];
   if( index < 0 || index >= image_lis.children.length )
     return false;
+  for( var i = 0; i < image_lis.children.length; i++ ){
+    image_lis.children[i].classList.remove('current');
+  }
+  image_lis.children[index].classList.add('current');
   this_gallery.dataset.imageTarget = index;
 }
 

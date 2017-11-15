@@ -363,6 +363,14 @@ POSTS & CONTENT STYLES
 						width:100%;
 						img{
 							width:100%;
+							max-height:0px;
+							transition-delay: 1s;
+							transition: max-height 2s;
+						}
+						&.current img{
+							max-height:2000px;
+							transition-delay: 0s;
+							transition: max-height 1s;
 						}
 					}
 			}
