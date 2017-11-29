@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     this_gallery.children[1].children[0].classList.add('current');
 
     window.setInterval(function(){ 
-      var diff = images_list.clientWidth * this_gallery.dataset.imageTarget - images_list.scrollLeft;
+      var diff = images_list.getBoundingClientRect().width * this_gallery.dataset.imageTarget - images_list.scrollLeft;
       if( diff > 0 )
         if( diff > SMOOTH_SCROLL_STEP )
           images_list.scrollLeft += SMOOTH_SCROLL_STEP;
