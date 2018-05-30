@@ -189,6 +189,12 @@ nav{
 	margin-top: 0;
 }
 
+
+		.image-gallery .gallery_images .gallery_image.current img {
+			max-height:90vh;
+		}
+
+
 		.hero{
 		}
 		.hero_overlay{    
@@ -223,9 +229,9 @@ nav{
 
 		.button_row {
 	   		text-align: center;
-
 	    
 		}
+
 
 		.button{
 	    	display:inline-block;
@@ -373,6 +379,13 @@ POSTS & CONTENT STYLES
 	margin-top: 0.2em;
 }
 
+
+.image-gallery {
+	&.about {
+    width: 80%;	
+    margin: 0 10%;
+  }
+}
 
 
 /*********************

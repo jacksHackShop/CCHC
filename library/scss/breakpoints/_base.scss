@@ -362,6 +362,7 @@ POSTS & CONTENT STYLES
 	    			vertical-align: middle;
 						width:100%;
 						img{
+
 							width:100%;
 							max-height:0px;
 							transition-delay: 1s;
@@ -371,6 +372,7 @@ POSTS & CONTENT STYLES
 							max-height:2000px;
 							transition-delay: 0s;
 							transition: max-height 1s;
+
 						}
 					}
 			}
@@ -1203,11 +1205,13 @@ FOOTER STYLES
 .image-gallery {
 	&.about {
 		background-color: $white;	
+
 	    width: 80%;	
 	    margin: 0 10%;
 	    padding: 30px 0;
 	}
 } 
+
 
 .about_text_row {
 	background-color: $about-gray;
