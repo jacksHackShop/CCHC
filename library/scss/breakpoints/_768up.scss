@@ -32,14 +32,23 @@ HEADER STYLES
 
 .header {
 	//position:fixed; REMOVED UNTIL RESPONSIVE HEADER FIGURED OUT
-	width:100%;
+	width:98%;
+	padding: 0 1%;
 }
 
 	#logo {
+
 		display:inline-block;
 		width:30%;
 		min-width:300px;
 		vertical-align:middle;
+		float: left;		
+
+		img{
+			width: 100%;
+			float: left;
+			margin-top: 0;
+		}
 	}
 
 /*********************
@@ -47,12 +56,33 @@ NAVIGATION STYLES
 *********************/
 
 nav{
-	display:inline-block;
-  vertical-align: top;
+	display: inline-block;
+ 	vertical-align: middle;
+}
+.nav_bar{
+	float: right;
+	padding: 5px 0;
+	display: inline-block;
+	font-size: 110%;
+	font-weight: 600;
+	width: 70%;
+	vertical-align: middle;
+    padding: 0;
+}
+
+
+#menu{
+	height: auto;
+	width: auto;
+ 	position: relative ;
+	background-color: white;
+	margin-top: 0;
+
 }
 
 .nav {
 	border: 0;
+	
 	ul {
 		background:$black;
 		margin-top:0;
@@ -151,12 +181,27 @@ nav{
 
 
 
-
-
+#ham {
+	display: none;
+}
 
 #content {
 	margin-top: 0;
 }
+
+		.hero{
+		}
+		.hero_overlay{    
+			width: 80%;
+	    padding: 5% 0;
+	    
+	    h4{
+	    	span{
+	    		border-bottom: 1px solid $white;
+	    		padding-bottom: 10px;
+	    	}
+	    }
+		}
 
 
 		.side_by_side{
@@ -177,15 +222,25 @@ nav{
 		}
 
 		.button_row {
-	    text-align: center;
+	   		text-align: center;
 
-	    .button{
+	    
+		}
+
+		.button{
 	    	display:inline-block;
 	    	padding:5px 10px;
 	    	margin:0 10px;
 	    }
-		}
 
+	    #donate_button{
+			padding: 2px 7px;
+			text-align: center;
+			display:inline-block;
+			vertical-align: middle;
+			font-size: 100%;
+			margin-top: 0;
+		}
 
 /*********************
 SIDEBARS & ASIDES
@@ -311,6 +366,16 @@ SIDEBARS & ASIDES
 
 
 /*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 0.2em;
+}
+
+
+
+/*********************
 FOOTER STYLES
 *********************/
 
@@ -335,3 +400,66 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+/* Start Mason Style Work */
+
+.footer {
+}
+
+	.newsletter_wrapper {
+
+		.subscribe_wrapper {
+			span {
+				width: unset;
+				font-size: larger;
+			}
+		}
+	}
+
+	.bottom_wrapper {
+
+
+		& > * {
+				display: inline-block;
+			}
+	}
+		.sponsers_wrapper {
+	    	width: 60%;
+
+			img {
+			    max-width: 250px;
+			    width: 40%;
+			    margin: 2% 4.5%;
+			}
+
+		}
+
+		.social_wrapper {
+			height: 100%;
+			width: 15%;
+			min-width: 120px;
+			max-width: 200px;
+			float: right;
+   			margin: 35px 10%;
+		}
+
+		.social_buttons_text {
+    		font-size: 20px;
+		}
+
+.committee_list_row {
+	
+	.committee_list {
+		display: inline-block;
+		text-align: left;
+		margin: 2.5% 5%;
+	}
+}
+/* END MASON */
+
+/* Start Chris style */
+
+.event-item a .empty-year {
+	margin-top: 40px;
+}
+
+/* End chris style */

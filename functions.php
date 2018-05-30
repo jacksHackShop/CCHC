@@ -12,7 +12,7 @@ sidebars, comments, etc.
 require_once( 'library/bones.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -243,5 +243,52 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+
+
+
+function acf_plugin_wysiwyg_styling() { ?>
+  <script>
+        (function($) {
+            acf.add_filter('wysiwyg_tinymce_settings', function(mceInit, id, $field) {
+                var fieldKey = $field.data('key');
+                var fieldName = $field.data('name');
+                var flexContentName = $field.parents('[data-type="flexible_content"]').first().data('name');
+                var layoutName = $field.parents('[data-layout]').first().data('layout');
+
+                mceInit.body_class += " acf-field-key-" + fieldKey;
+                mceInit.body_class += " acf-field-name-" + fieldName;
+                if (flexContentName) {
+                    mceInit.body_class += " acf-flex-name-" + flexContentName;
+                }
+                if (layoutName) {
+                    mceInit.body_class += " acf-layout-" + layoutName;
+                }
+                return mceInit;
+            });
+
+        })(jQuery);
+    </script>
+<?php
+}
+add_action('acf/input/admin_footer', 'acf_plugin_wysiwyg_styling');
+
+
+// add categories for attachments
+function add_categories_for_attachments() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'add_categories_for_attachments' );
+
+// add tags for attachments
+function add_tags_for_attachments() {
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+
+
+
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

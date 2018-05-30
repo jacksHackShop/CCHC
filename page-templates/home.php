@@ -20,7 +20,13 @@
 							</div>
 
 							<div class="side_by_side_row gray cf">
-								<div class="side_by_side image right" style='background-image:url("<?php echo get_field("side_by_side_image_1"); ?>");'></div><div class="side_by_side text left"><?php echo get_field("side_by_side_text_1"); ?></div>
+								<div class="side_by_side image right" style='background-image:url("<?php echo get_field("side_by_side_image_1"); ?>");'>
+									<?php if( get_field("is_video_link_1") && is_string(get_field("video_link_1")) ): ?>
+										<a class="video_link_overlay" target="_blank" href="<?php echo get_field("video_link_1"); ?>" style="background-image:url('<?php echo get_template_directory_uri(); ?>/library/images/play.png');">
+										</a>
+									<?php endif; ?>	
+								</div>
+								<div class="side_by_side text left"><?php echo get_field("side_by_side_text_1"); ?></div>
 							</div>
 							
 							<img class="img_divider" src="<?php echo get_field("image_divider"); ?>">
@@ -31,7 +37,12 @@
 							</div>
 
 							<div class="side_by_side_row gray cf">
-								<div class="side_by_side image left" style='background-image:url("<?php echo get_field("side_by_side_image_2"); ?>");'></div>
+								<div class="side_by_side image left" style='background-image:url("<?php echo get_field("side_by_side_image_2"); ?>");'>
+									<?php if( get_field("is_video_link_2") && is_string(get_field("video_link_2")) ): ?>
+										<a class="video_link_overlay" target="_blank" href="<?php echo get_field("video_link_2"); ?>" style="background-image:url('<?php echo get_template_directory_uri(); ?>/library/images/play.png');">
+										</a>
+									<?php endif; ?>	
+								</div>
 								<div class="side_by_side text right"><?php echo get_field("side_by_side_text_2"); ?></div>
 							</div>
 
