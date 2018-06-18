@@ -454,7 +454,6 @@ nav {
 .side_by_side {
   width: 50%;
   display: inline-block;
-  /* hide any possible text element */
 }
 /* line 228, ../scss/breakpoints/_768up.scss */
 .side_by_side.left {
@@ -469,24 +468,20 @@ nav {
   padding: 0% 6%;
   height: 100%;
 }
-/* line 239, ../scss/breakpoints/_768up.scss */
-.side_by_side.image p, .side_by_side.image h1, .side_by_side.image h2, .side_by_side.image h3, .side_by_side.image h4, .side_by_side.image span {
-  visibility: hidden;
-}
 
-/* line 245, ../scss/breakpoints/_768up.scss */
+/* line 239, ../scss/breakpoints/_768up.scss */
 .button_row {
   text-align: center;
 }
 
-/* line 251, ../scss/breakpoints/_768up.scss */
+/* line 245, ../scss/breakpoints/_768up.scss */
 .button {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
 }
 
-/* line 257, ../scss/breakpoints/_768up.scss */
+/* line 251, ../scss/breakpoints/_768up.scss */
 #donate_button {
   padding: 5px 7px;
   text-align: center;
@@ -499,28 +494,28 @@ nav {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 270, ../scss/breakpoints/_768up.scss */
+/* line 264, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 274, ../scss/breakpoints/_768up.scss */
+/* line 268, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 279, ../scss/breakpoints/_768up.scss */
+/* line 273, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 284, ../scss/breakpoints/_768up.scss */
+/* line 278, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 292, ../scss/breakpoints/_768up.scss */
+/* line 286, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -540,12 +535,12 @@ SIDEBARS & ASIDES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 393, ../scss/breakpoints/_768up.scss */
+/* line 387, ../scss/breakpoints/_768up.scss */
 #content {
   margin-top: 0.2em;
 }
 
-/* line 399, ../scss/breakpoints/_768up.scss */
+/* line 393, ../scss/breakpoints/_768up.scss */
 .image-gallery.about {
   width: 80%;
   margin: 0 10%;
@@ -559,7 +554,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 417, ../scss/breakpoints/_768up.scss */
+/* line 411, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -570,29 +565,29 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 /* Start Mason Style Work */
-/* line 439, ../scss/breakpoints/_768up.scss */
+/* line 433, ../scss/breakpoints/_768up.scss */
 .newsletter_wrapper .subscribe_wrapper span {
   width: unset;
   font-size: larger;
 }
 
-/* line 449, ../scss/breakpoints/_768up.scss */
+/* line 443, ../scss/breakpoints/_768up.scss */
 .bottom_wrapper > * {
   display: inline-block;
 }
 
-/* line 453, ../scss/breakpoints/_768up.scss */
+/* line 447, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper {
   width: 60%;
 }
-/* line 456, ../scss/breakpoints/_768up.scss */
+/* line 450, ../scss/breakpoints/_768up.scss */
 .sponsers_wrapper img {
   max-width: 250px;
   width: 40%;
   margin: 2% 4.5%;
 }
 
-/* line 464, ../scss/breakpoints/_768up.scss */
+/* line 458, ../scss/breakpoints/_768up.scss */
 .social_wrapper {
   height: 100%;
   width: 15%;
@@ -602,12 +597,12 @@ mobile. Make sure to double check these!
   margin: 35px 10%;
 }
 
-/* line 473, ../scss/breakpoints/_768up.scss */
+/* line 467, ../scss/breakpoints/_768up.scss */
 .social_buttons_text {
   font-size: 20px;
 }
 
-/* line 479, ../scss/breakpoints/_768up.scss */
+/* line 473, ../scss/breakpoints/_768up.scss */
 .committee_list_row .committee_list {
   display: inline-block;
   text-align: left;
@@ -616,21 +611,21 @@ mobile. Make sure to double check these!
 
 /* END MASON */
 /* Start Chris style */
-/* line 489, ../scss/breakpoints/_768up.scss */
+/* line 483, ../scss/breakpoints/_768up.scss */
 .event-item a .empty-year {
   margin-top: 40px;
 }
 
-/* line 493, ../scss/breakpoints/_768up.scss */
+/* line 487, ../scss/breakpoints/_768up.scss */
 .image-gallery {
   /* START SLICK CUSTOM STYLES */
 }
-/* line 497, ../scss/breakpoints/_768up.scss */
+/* line 491, ../scss/breakpoints/_768up.scss */
 .image-gallery .slide img {
   max-height: 400px;
   margin: auto;
 }
-/* line 502, ../scss/breakpoints/_768up.scss */
+/* line 496, ../scss/breakpoints/_768up.scss */
 .image-gallery .slide iframe {
   height: 400px;
   width: 100%;
