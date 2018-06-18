@@ -20,17 +20,17 @@
 								JOIN US ON
 							</p>
 							<div class="social_media_buttons">
-								<a href="www.facebook.com">
+								<a target="_blank" href="https://www.facebook.com/SRFcure/ ">
 									<img src="<?php echo get_template_directory_uri(); ?>/library/images/fb.svg">
 								</a>
-								<a href="www.twitter.com">
+								<a target="_blank" href="https://twitter.com/srfcure">
 									<img src="<?php echo get_template_directory_uri(); ?>/library/images/twtr.svg">
 								</a>
-								<a href="www.instagram.com">
+								<a target="_blank" href="https://www.instagram.com/srfcure/">
 									<img src="<?php echo get_template_directory_uri(); ?>/library/images/insta.svg">
 								</a>
-								<a href="www.gmail.com">
-									<img src="<?php echo get_template_directory_uri(); ?>/library/images/email.svg">
+								<a target="_blank" href="https://www.youtube.com/channel/UCsTzCavzIctmsu6i7Hm-gLg">
+									<img src="<?php echo get_template_directory_uri(); ?>/library/images/yt.svg">
 								</a>
 							</div>
 						</div>
@@ -45,8 +45,10 @@
 
 								$sponsor_images = get_posts($query_image_args);
 								foreach($sponsor_images as $sponsor_image) {
-									echo '<a><img src="';
-									echo wp_get_attachment_url($sponsor_image->ID);
+									$id = $sponsor_image->ID;
+									$url = get_post_meta($id, '_wp_attachment_image_alt', true);
+									echo '<a target="_blank" href="'.$url.'"><img src="';
+									echo wp_get_attachment_url($id);
 									echo '"></a>';
 								}
 							?>

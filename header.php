@@ -55,22 +55,18 @@
 
 					<div class="nav_bar">
 						<nav id="menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<?php wp_nav_menu(array(
-	    					         'container' => false,                           // remove nav container
-	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-	    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-	    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-	    					         'before' => '',                                 // before the menu
-	        			               'after' => '',                                  // after the menu
-	        			               'link_before' => '',                            // before each link
-	        			               'link_after' => '',                             // after each link
-	        			               'depth' => 0,                                   // limit the depth of the nav
-	    					         'fallback_cb' => ''                             // fallback function (if there is one)
-							)); ?>
+							
+							<?php $menu_items = wp_get_nav_menu_items('mainNav');?>
+							<ul id="menu_mainnav" class="nav top-nav cf">
+							<?php foreach ($menu_items as $item) {
+							
+							    echo "<li class='menu-item menu-item-type-custom menu-item-object-custom'><a href='{$item->url}'>{$item->title}</a></li>"; 
+							}
+							echo "<li class='nav_button menu-item menu-item-type-custom menu-item-object-custom'><div id='button_wrapper'><a href='http://www.srfcure.org/donate?view=donation' target='_blank' id ='donate_button' class='button white'>Donate</a></div>";?>
+							</ul>
 
 						</nav>
-						<a href="http://google.com" target="_blank" id ="donate_button" class="button white">Donate</a>
+						
 						<div id="ham" onclick="document.getElementById('menu').classList.toggle('show');">
 							<img src="<?php echo get_template_directory_uri();?>/library/images/menu.svg">
 						</div>

@@ -158,7 +158,7 @@ HEADER STYLES
 
 	#logo {
 		vertical-align: middle;
-		width: 50%;
+		width: 80%;
 		height: auto;
 		display: inline-block;		
 		padding-top: 0.8%;
@@ -187,8 +187,9 @@ and more scalable.
 .nav_bar{
 	float:right;
 	vertical-align: top;
-	width: 25%;
+	width: 20%;
 	text-align:right;
+	padding: .8%;
 }
 
 .nav {
@@ -264,10 +265,9 @@ and more scalable.
 } /* end .nav */
 
 #donate_button{
-	padding: 3% 4%;
+	padding: 5px;
 	text-align: center;
 	display:inline-block;
-	font-size: 0.5em;
 	vertical-align: middle;
 	margin: 0;
 	line-height: 100%;
@@ -275,7 +275,7 @@ and more scalable.
 }
 
 #ham {
-  width:27%;
+  width:45%;
   cursor:pointer;
   display: inline-block;
   vertical-align: middle;
@@ -292,17 +292,26 @@ and more scalable.
 
 #menu{
   height:90%; 
-  right:0;
-  width:0;
-  margin-top: 1.6em;
+  right:-175px;
+  width:175px;
+  margin-top: 7%;
   position:fixed;
   background-color:white;
-  transition:width 1s;
+  transition:right .6s cubic-bezier(0.65, 0.05, 0.36, 1);
   z-index: 99;
   opacity: 0.9;
+  li{
+  	a {
+			font-size:18px;
+  	}
+  	&.nav_button{
+  		margin-right: 12px;
+    	margin-top: 20px;
+  	}
+  }
 }
 #menu.show{
-  width:80%;
+  right:0;
 }
 
 
@@ -319,383 +328,394 @@ POSTS & CONTENT STYLES
 .centered{
 	text-align: center;
 }
+	
+       
+.image-gallery {
+	background-color: $gallery-grey;
+	margin: 40px 0;
+	padding: 70px 0;
+	font-size: 0;
 
+	.gal_nav{
+		display:inline-block;
+		width:10%;
+		font-size:50px;
+		vertical-align: top;
+		cursor:pointer;
+		text-align:center;
+		vertical-align: middle;
 
+		&.prev{
+		}
+		&.next{
+		}
+		&.faded{
+			opacity:.5;
+		}
+	}
+	/* START SLICK CUSTOM STYLES */
+	.slide {
+		img{
+			max-height: 300px;
+			margin: auto;
 
-		
-
-		.image-gallery {
-			background-color: $gallery-grey;
-			margin: 40px 0;
-			padding: 70px 0;
-			font-size: 0;
-
-			.gal_nav{
+		}
+		iframe{
+			height: 300px;
+			width: 100%;
+		}
+	}
+	/* DEPRICATE GALLERY STYLES */
+	.gallery_images{
+		display:inline-block;
+		width:80%;
+		overflow:hidden;
+ 		white-space: nowrap;
+		vertical-align: middle;
+		ul{
+			transition: margin-left .5s;
+		}
+			.gallery_image{
 				display:inline-block;
-				width:10%;
-				font-size:50px;
-    		vertical-align: top;
-    		cursor:pointer;
-				text-align:center;
-				vertical-align: middle;
+			vertical-align: middle;
+				width:100%;
+				img{
 
-				&.prev{
-				}
-				&.next{
-				}
-				&.faded{
-					opacity:.5;
-				}
-			}
-
-			.gallery_images{
-				display:inline-block;
-				width:80%;
-				overflow:hidden;
-   	 		white-space: nowrap;
-				vertical-align: middle;
-				ul{
-					transition: margin-left .5s;
-				}
-					.gallery_image{
-						display:inline-block;
-	    			vertical-align: middle;
-						width:100%;
-						img{
-
-							width:100%;
-							max-height:0px;
-							transition-delay: 1s;
-							transition: max-height 2s;
-						}
-						&.current img{
-							max-height:2000px;
-							transition-delay: 0s;
-							transition: max-height 1s;
-
-						}
-					}
-			}
-		}
-
-
-		.hero{
-	    background-size: cover;
-	    background-position: center;
-	    margin: 0 3% 4%;
-		}
-		.hero_overlay{    
-			width: 95%;
-	    margin: auto;
-	    padding: 3% 0;
-	    a{
-	    	background-color: $white;
-	    	color: $dark-gray;
-	    	text-transform: uppercase;
-    		padding: 12px 20px;
-    		font-size: 0.8em;
-	    }
-	    h4{
-	    	span{
-	    		border-bottom: 1px solid $white;
-	    		padding-bottom: 10px;
-	    	}
-	    }
-	    h6{
-	    	span{
-	    		background-color: $dark-gray;
-	    	}
-	    }
-		}
-
-		.side_by_side_row{
-			width:100%;
-			position:relative;
-			display:block;
-			&.blue, a{
-				background-color:$blue;
-				color:$white;
-			}
-			&.gray, a{
-				background-color:$gray;
-				color:$black;
-			}
-
-		}
-		.side_by_side{
-			width:100%;
-			display:block;
-			overflow: hidden;
-			position:relative;
-			
-			&.image{
-				background-position:center;
-				background-size:cover;
-				height:500px;
-				.video_link_overlay{
 					width:100%;
-					height:100%;
-					opacity:.4;
-					background-repeat: no-repeat;
-					background-position:center;
-					background-size:20%;
-					margin:0;
-					border:0;
-					padding:0;
-					position:absolute;
-					background-color:$black;
-					transition:opacity 1s;
-					&:hover{
-						opacity:.7
-					}
+					max-height:0px;
+					transition-delay: 1s;
+					transition: max-height 2s;
+				}
+				&.current img{
+					max-height:2000px;
+					transition-delay: 0s;
+					transition: max-height 1s;
+
 				}
 			}
-			&.text{
-				padding: 1px 3%;
+	}
+}
+
+
+.hero{
+background-size: cover;
+background-position: center;
+margin: 0 3% 4%;
+}
+.hero_overlay{    
+	width: 95%;
+margin: auto;
+padding: 3% 0;
+a{
+	background-color: $white;
+	color: $dark-gray;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	font-size: 0.8em;
+}
+h4{
+	span{
+		border-bottom: 1px solid $white;
+		padding-bottom: 10px;
+	}
+}
+h6{
+	span{
+		background-color: $dark-gray;
+	}
+}
+}
+
+.side_by_side_row{
+	width:100%;
+	position:relative;
+	display:block;
+	&.blue, &.blue a{
+		background-color:$blue;
+		color:$white;
+
+	}
+	&.gray, &.gray a{
+		background-color:$gray;
+		color:$black;
+	}
+
+}
+.side_by_side{
+	width:100%;
+	display:block;
+	overflow: hidden;
+	position:relative;
+	
+	&.image{
+		background-position:center;
+		background-size:cover;
+		height:500px;
+		.video_link_overlay{
+			width:100%;
+			height:100%;
+			opacity:.4;
+			background-repeat: no-repeat;
+			background-position:center;
+			background-size:20%;
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			background-color:$black;
+			transition:opacity 1s;
+			&:hover{
+				opacity:.7
 			}
 		}
+	}
+	&.text{
+		padding: 1px 3%;
 
-		.button_row {
-	    position: relative;
-	    padding: 25px 25px;
-		}
-	    .button, .button:visited{    
-	    	margin: 10px auto;
-	    	color: $icon_gray;
-		    border: 1px solid $icon_gray;
-		    text-decoration: none;
-		    text-transform: uppercase;
-		    padding: 30px;
-		    display: block;
-		    text-align: center;
-	    }
-		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+	}
+}
 
-			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
-			}
+.button_row {
+position: relative;
+padding: 25px 25px;
+}
+.button, .button:visited{    
+	margin: 10px auto;
+	color: $icon_gray;
+    border: 1px solid $icon_gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 30px;
+    display: block;
+    text-align: center;
+}
+.hentry {
+	background-color: $white;
+	border-radius: 3px;
+	margin-bottom: 1.5em;
+	border: 1px solid $border-color;
 
-			footer {
-				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+	header {
+		border-bottom: 1px solid $light-gray;
+		padding: 1.5em;
+	}
 
-				p {
-					margin: 0;
-				}
-			}
+	footer {
+		padding: 1.5em;
+		border-top: 1px solid $light-gray;
 
-		} /* end .hentry */
-
-		.single-title,
-		.page-title,
-		.entry-title {
+		p {
 			margin: 0;
 		}
+	}
 
-		.single-title {}
+} /* end .hentry */
 
-		.page-title {}
+.single-title,
+.page-title,
+.entry-title {
+	margin: 0;
+}
 
-		.entry-title {}
+.single-title {}
 
-		.archive-title {}
+.page-title {}
 
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
+.entry-title {}
 
-		/* post meta */
-		.byline {
+.archive-title {}
+
+/* want to style individual post classes? Booya! */
+.post-id {}         /* post by id (i.e. post-3) */
+.post {}            /* general post style */
+.page {}            /* general article on a page style */
+.attachment {}      /* general style on an attatchment */
+.sticky {}          /* sticky post style */
+.hentry {}          /* hentry class */
+.category-slug {}   /* style by category (i.e. category-videos) */
+.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+/* post meta */
+.byline {
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
+
+	time {}
+}
+
+/* entry content */
+.entry-content {
+	padding: 1.5em 1.5em 0;
+
+	p {
+		margin: 0 0 1.5em;
+	}
+
+
+	ul, ol, table, dl {}
+
+	ul, ol {
+
+		li {}
+
+	}
+
+	ul {
+
+		li {}
+
+	}
+
+	ol {
+
+		li {}
+
+	}
+
+	table {
+		width: 100%;
+		border: 1px solid $gray;
+		margin-bottom: 1.5em;
+
+		caption {
+			margin: 0 0 7px;
+			font-size: 0.75em;
 			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-
-			time {}
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
+	}
 
-		/* entry content */
-		.entry-content {
-			padding: 1.5em 1.5em 0;
+	tr {
+		border-bottom: 1px solid $gray;
 
-			p {
-				margin: 0 0 1.5em;
-			}
+		&:nth-child(even) {
+			background-color: $light-gray;
+		}
+	}
 
+	td {
+		padding: 7px;
+		border-right: 1px solid $gray;
 
-			ul, ol, table, dl {}
+		&:last-child {
+			border-right: 0;
+		}
+	}
 
-			ul, ol {
+	th {
+		background-color: $light-gray;
+		border-bottom: 1px solid $gray;
+		border-right: 1px solid $gray;
 
-				li {}
+		&:last-child {
+			border-right: 0;
+		}
+	}
 
-			}
+	blockquote {
+		margin: 0 0 1.5em 0.75em;
+		padding: 0 0 0 0.75em;
+		border-left: 3px solid $blue;
+		font-style: italic;
+		color: $meta-gray;
 
-			ul {
+		&:before {}
 
-				li {}
+	}
 
-			}
+	dl {}
 
-			ol {
+	dt {}
 
-				li {}
+	dd {
+		margin-left: 0;
+		font-size: 0.9em;
+		color: #787878;
+		margin-bottom: 1.5em;
+	}
 
-			}
+	img {
+		margin: 0 0 1.5em 0;
+		max-width: 100%;
+		height: auto;
+	}
 
-			table {
-				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
+	/*
+	image alignment on a screen this size may be
+	a bit difficult. It's set to start aligning
+	and floating images at the next breakpoint,
+	but it's up to you. Feel free to change it up.
+	*/
+	.alignleft, img.alignleft {}
+	.alignright, img.alignright {}
+	.aligncenter, img.aligncenter {}
 
-				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-				}
-			}
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		max-width: 100%;
+		height: auto;
+	}
 
-			tr {
-				border-bottom: 1px solid $gray;
+	pre {
+		background: $black;
+		color: $light-gray;
+		font-size: 0.9em;
+		padding: 1.5em;
+		margin: 0 0 1.5em;
+		border-radius: 3px;
+	}
 
-				&:nth-child(even) {
-					background-color: $light-gray;
-				}
-			}
+} /* end .entry-content */
 
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
 
-				&:last-child {
-					border-right: 0;
-				}
-			}
+	/* images inside wp-caption */
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
 
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
 
-				&:last-child {
-					border-right: 0;
-				}
-			}
+} /* end .wp-caption */
 
-			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
-				color: $meta-gray;
+/* image gallery styles */
+.gallery {
 
-				&:before {}
+	dl {
 
-			}
+		a {}
 
-			dl {}
+		img {}
 
-			dt {}
+	}
 
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: #787878;
-				margin-bottom: 1.5em;
-			}
+	dt {}
 
-			img {
-				margin: 0 0 1.5em 0;
-				max-width: 100%;
-				height: auto;
-			}
+	dd {}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
+} /* end .gallery */
 
-			.size-auto,
-			.size-full,
-			.size-large,
-			.size-medium,
-			.size-thumbnail {
-				max-width: 100%;
-				height: auto;
-			}
+/* gallery caption styles */
+.gallery-caption {}
 
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
-
-		} /* end .entry-content */
-
-		.wp-caption {
-			max-width: 100%;
-			background: #eee;
-			padding: 5px;
-
-			/* images inside wp-caption */
-			img {
-				max-width: 100%;
-				margin-bottom: 0;
-				width: 100%;
-			}
-
-			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
-				text-align: center;
-			}
-
-		} /* end .wp-caption */
-
-		/* image gallery styles */
-		.gallery {
-
-			dl {
-
-				a {}
-
-				img {}
-
-			}
-
-			dt {}
-
-			dd {}
-
-		} /* end .gallery */
-
-		/* gallery caption styles */
-		.gallery-caption {}
-
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
 
 	// the tag output
 	.tags {
@@ -771,10 +791,15 @@ EVENT STYLES BY CHRIS
   height: 350px;
   padding: 30px;
 
+
   /*JACK CODE*/
     text-align: left;
     display: inline-block;
   /*END*/
+  .date {
+  	float:right;
+  	margin-right: 25px;
+  }
   
   a {
   	text-decoration: none;

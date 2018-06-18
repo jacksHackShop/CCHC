@@ -14,10 +14,10 @@
 
 							<?php the_post(); ?>
 							<div class="side_by_side_row blue cf">
-								<div class="side_by_side image left" style='background-image:url("<?php echo get_field("side_by_side_image_1"); ?>");'></div><div class="side_by_side text right"><?php echo get_field("side_by_side_text_1"); ?></div>
+								<div class="side_by_side image left" style='background-image:url("<?php echo get_field("side_by_side_image_1"); ?>");'><?php echo get_field("side_by_side_text_1"); ?></div><div class="side_by_side text right"><?php echo get_field("side_by_side_text_1"); ?></div>
 							</div>
 							<div class="side_by_side_row blue cf">
-								<div class="side_by_side image right" style='background-image:url("<?php echo get_field("side_by_side_image_2"); ?>");'></div>
+								<div class="side_by_side image right" style='background-image:url("<?php echo get_field("side_by_side_image_2"); ?>");'><?php echo get_field("side_by_side_text_2"); ?></div>
 								<div class="side_by_side text left"><?php echo get_field("side_by_side_text_2"); ?></div>
 							</div>
 							<div class="button_row cf">
@@ -28,16 +28,11 @@
 									<span class="gal_nav prev">
 										&#60;
 									</span>
-									<ul class="gallery_images">
-										<?php 
-											$images = get_field('image_gallery'); 
-											foreach( $images as $image ){
-											?>
-												<li class="gallery_image"><img src='<?php echo $image["url"];?>'></li>	
-											<?php
-											}
+									<div class="gallery_images">
+										<?php buildGallery('slide_gallery', 'slide_gallery', 'slide');
 										?>
-									</ul>
+										
+									</div>
 									<span class="gal_nav next">
 										&#62;
 									</span>

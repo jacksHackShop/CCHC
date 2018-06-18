@@ -72,11 +72,22 @@ nav{
 
 
 #menu{
+	right: 0;
 	height: auto;
 	width: auto;
  	position: relative ;
 	background-color: white;
 	margin-top: 0;
+	li.nav_button{
+		margin-top: 0;
+		margin-right: 0;
+		#button_wrapper{
+			padding: .6em;
+			a {
+				border: 1px solid #4D4D4F;
+			}
+		}
+	}
 
 }
 
@@ -218,12 +229,16 @@ nav{
 
 			&.right{ float:right; }
 
-			&.text{ 
+			&.text, &.image{ 
 				padding: 0% 6%;
-				height:49vw;
+				height: 100%;
 			}
+			/* hide any possible text element */
 			&.image{
-				height:49vw;
+				
+				p, h1, h2, h3, h4, span{
+					visibility: hidden;
+				}
 			}
 		}
 
@@ -240,7 +255,7 @@ nav{
 	    }
 
 	    #donate_button{
-			padding: 2px 7px;
+			padding: 5px 7px;
 			text-align: center;
 			display:inline-block;
 			vertical-align: middle;
@@ -475,4 +490,19 @@ mobile. Make sure to double check these!
 	margin-top: 40px;
 }
 
+.image-gallery {
+	
+	/* START SLICK CUSTOM STYLES */
+	.slide {
+		img{
+			max-height: 400px;
+			margin: auto;
+
+		}
+		iframe{
+			height: 400px;
+			width: 100%;
+		}
+	}
+}
 /* End chris style */

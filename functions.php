@@ -242,9 +242,49 @@ function bones_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
-add_action('wp_enqueue_scripts', 'bones_fonts');
 
+function buildGallery($field_name, $gallery_class, $slide_class){
+  // load css
+  echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>';
+  echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>';
+  // load slick js 
+  echo "<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>";
+  // load youtube iframe api
+  echo "<script type='text/javascript' src='https://www.youtube.com/iframe_api'></script>";
 
+ /*echo '<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement(\'script\');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName(\'script\')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);</script>';
+*/
+  
+  echo "<div class='{$gallery_class}'>";
+  $slides = get_field($field_name);
+  foreach ($slides as $slide) {
+    // build each slide
+    echo "<div class='{$slide_class}'>";
+    // this bit will be custom for each gallery
+    // parse youtube url for video id
+    $full_url = $slide['youtube'];
+    preg_match('/\?v=([^\?\n\r]*)/', $full_url, $match);
+    // if youtube is set correctly and we found a match then make an iframe
+    if (count($match) > 0) {
+      $origin = get_home_url();
+      /* I FRAME MADE IN JS 
+      echo "<iframe src='https://www.youtube.com/embed/{$match[1]}?enablejsapi=1&origin={$origin}' frameborder='0' allowfullscreen referrerpolicy='no-referrer' data-vidid='{$match[1]}'></iframe>";
+      */
+      echo "<div id='{$match[1]}' class='youtube' data-videoid='{$match[1]}'></div>";
+    } else {
+      echo "<img src='{$slide['image']['url']}'>";
+    }
+    echo "</div>";
+  }
+  echo '</div>';
+
+}
 
 
 
@@ -287,8 +327,22 @@ function add_tags_for_attachments() {
 }
 
 
-
-
+// This is to fix a bug causing custom templates not to show
+function wp_42573_fix_template_caching( WP_Screen $current_screen ) {
+    // Only flush the file cache with each request to post list table, edit post screen, or theme editor.
+    if ( ! in_array( $current_screen->base, array( 'post', 'edit', 'theme-editor' ), true ) ) {
+        return;
+    }
+    $theme = wp_get_theme();
+    if ( ! $theme ) {
+        return;
+    }
+    $cache_hash = md5( $theme->get_theme_root() . '/' . $theme->get_stylesheet() );
+    $label = sanitize_key( 'files_' . $cache_hash . '-' . $theme->get( 'Version' ) );
+    $transient_key = substr( $label, 0, 29 ) . md5( $label );
+    delete_transient( $transient_key );
+}
+add_action( 'current_screen', 'wp_42573_fix_template_caching' );
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

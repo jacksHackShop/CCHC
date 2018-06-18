@@ -60,16 +60,10 @@
 									<span class="gal_nav prev">
 										&#60;
 									</span>
-									<ul class="gallery_images">
-										<?php 
-											$images = get_field('image_gallery'); 
-											foreach( $images as $image ){
-											?>
-												<li class="gallery_image"><img src='<?php echo $image["url"];?>'></li>	
-											<?php
-											}
+									<div class="gallery_images">
+										<?php buildGallery('slide_gallery', 'slide_gallery', 'slide');
 										?>
-									</ul>
+									</div>
 									<span class="gal_nav next">
 										&#62;
 									</span>

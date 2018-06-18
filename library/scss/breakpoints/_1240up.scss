@@ -9,14 +9,27 @@ on larger screens.
 
 ******************************************************************/
 
+.image-gallery {
+    
+    /* START SLICK CUSTOM STYLES */
+    .slide {
+        img {
+            max-height: 600px;
+            margin: auto;
+
+        }
+        iframe {
+            height: 600px;
+            width: 100%;
+        }
+    }
+}
 
 
-@media (min-width: 1540px) {
-	.wrap {
-	  width: 1540px;
-	}
-	.side_by_side{
-		width:770px;
-		height:770px;
-	}
+.wrap {
+  width: 1240px;
+}
+.side_by_side {
+    width:50%;
+    min-height: 620px;
 }

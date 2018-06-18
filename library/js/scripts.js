@@ -119,36 +119,69 @@ jQuery(document).ready(function($) {
 
 }); /* end of as page load scripts */
 
-
-
+// make global players object
+var players = {}
 document.addEventListener("DOMContentLoaded", function(event) { 
-  var galleries = document.getElementsByClassName('image-gallery') || [];
+  if (document.getElementsByClassName('slide_gallery').length > 0){
+    jQuery('.slide_gallery').slick({
+      dots: false,
+      infinite: true,
+      arrows: true,
+      prevArrow: document.getElementsByClassName('prev')[0],
+      nextArrow: document.getElementsByClassName('next')[0],
+      speed: 250,
+      fade: true,
+      cssEase: 'linear'
+    });
 
-  var SMOOTH_SCROLL_STEP = 30;
+    // if there is a youtube video
+    if (document.getElementsByClassName('youtube').length > 0) {
+      
+      loadVideos();
 
-  for( var i = 0; i < galleries.length; i++ ){
-    var this_gallery = galleries[i];
-    var images_list = this_gallery.children[1];
-    this_gallery.children[0].addEventListener('click',change_gallery_target.bind( this_gallery, -1 ));
-    this_gallery.children[2].addEventListener('click',change_gallery_target.bind( this_gallery, 1 ));
-    this_gallery.children[1].children[0].classList.add('current');
-
-    window.setInterval(function(){ 
-      var diff = images_list.getBoundingClientRect().width * this_gallery.dataset.imageTarget - images_list.scrollLeft;
-      if( diff > 0 )
-        if( diff > SMOOTH_SCROLL_STEP )
-          images_list.scrollLeft += SMOOTH_SCROLL_STEP;
-        else
-          images_list.scrollLeft += diff;
-      else
-        if( diff < 0 )
-          if( diff < -SMOOTH_SCROLL_STEP )
-            images_list.scrollLeft -= SMOOTH_SCROLL_STEP;
-          else
-            images_list.scrollLeft += diff;
-    }, 15);
+      // add listeners to the arrows
+      document.getElementsByClassName('prev')[0].addEventListener('click', function(e){
+        var next_slide = document.getElementsByClassName('slick-current')[0].nextSibling;
+        if (next_slide.children[0].classList.contains('youtube')) {
+          var player = players[next_slide.children[0].dataset.videoid];
+          player.pauseVideo();
+        }
+      });
+      document.getElementsByClassName('next')[0].addEventListener('click', function(e){
+        var prev_slide = document.getElementsByClassName('slick-current')[0].previousSibling;
+        if (prev_slide.children[0].classList.contains('youtube')) {
+          var player = players[prev_slide.children[0].dataset.videoid];
+          player.pauseVideo();
+        }
+      });
+      
+    }    
   }
 });
+
+
+
+function loadVideos(){
+  // ensure api is finished loading
+  if (YT.loaded !== 1) {
+    setTimeout(loadVideos, 50);
+    return;
+  }
+  // set up youtube api for each player
+  var videos = document.getElementsByClassName('youtube');
+ 
+  for (var i = 0; i < videos.length; i++) {
+    // if the video id is set
+    
+    var player = new YT.Player(videos[i], {
+      videoId: videos[i].id,
+      width: '100%',
+      height: '500px'
+    });
+    players[videos[i].id] = player;
+    
+  }
+}
 
 function change_gallery_target( change_by ){
   var this_gallery = this;
